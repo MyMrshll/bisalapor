@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0F1E55" />
+  <title>BisaLapor — Product UI v2</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --navy: rgba(255, 255, 255, .78);
+      --surface: rgba(255, 255, 255, .64);
+      --surface-2: rgba(247, 250, 255, .72);
+      --inset: rgba(241, 245, 251, .82);
+      --ink: #10204f;
+      --muted: #64708b;
+      --line: rgba(15, 30, 85, .12);
+      --highlight: rgba(255, 255, 255, .9);
+      --shadow: rgba(15, 30, 85, .16);
+      --brand: #0f1e55;
+      --blue: #2f6fda;
+      --success: #238653;
+      --warning: #a96b00;
+      --error: #c73548;
+      --glass-blur: 18px;
+      --glass-border: rgba(255, 255, 255, .78);
+      --glass-shadow: 0 14px 34px rgba(15, 30, 85, .09), 0 3px 10px rgba(15, 30, 85, .05), inset 0 1px 0 rgba(255, 255, 255, .92);
+      --radius-lg: 18px;
+      --radius-md: 13px;
+      --radius-sm: 10px;
+      --ease: cubic-bezier(.2,.8,.2,1);
+
+      /* Systematic Spacing Scale */
+      --gap-xs: 4px;
+      --gap-sm: 8px;
+      --gap-md: 12px;
+      --gap-lg: 16px;
+      --gap-xl: 20px;
+      --gap-2xl: 24px;
+      --gap-3xl: 28px;
+      --gap-4xl: 32px;
+    }
+
+    * { box-sizing: border-box; }
+    html { background: var(--bg); }
+    body {
+      margin: 0;
+      min-width: 320px;
+      color: var(--ink);
+      background: var(--bg);
+      background-image: radial-gradient(circle at 8% 0%, rgba(116, 165, 255, .13), transparent 34%), radial-gradient(circle at 92% 8%, rgba(15, 30, 85, .08), transparent 30%);
+      background-attachment: fixed;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 14px;
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+    }
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+    button:focus-visible, input:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+    h1, h2, h3, p { margin: 0; }
+    h1 { font-size: 21px; font-weight: 750; letter-spacing: -.025em; line-height: 1.25; color: #0f172a; }
+    h2 { font-size: 15px; font-weight: 700; letter-spacing: -.015em; color: #0f172a; }
+    .subtitle { margin-top: 4px; color: #64748b; font-size: 13px; font-weight: 400; line-height: 1.4; }
+
+    .app { min-height: 100vh; display: flex; }
+
+    /* Sidebar Navigation (Icon Rail - 3x Icon Size) */
+    .sidebar {
+      width: 136px;
+      flex: 0 0 136px;
+      min-height: 100vh;
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      padding: 24px 12px 20px;
+      background: #ffffff;
+      border-right: 1px solid rgba(226, 232, 240, 0.85);
+      box-shadow: 2px 0 16px rgba(15, 30, 85, .03);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 10;
+      overflow-y: auto;
+      scrollbar-width: none;
+    }
+    .sidebar::-webkit-scrollbar { display: none; }
+    .brand { display: flex; justify-content: center; align-items: center; padding: 0 0 12px; width: 100%; }
+    /* Brand mark enlarged 2x from the original 54px artwork. */
+    .brand-logo-btn { width: 124px; height: 124px; border-radius: 28px; display: grid; place-items: center; background: transparent; border: none; padding: 0; cursor: pointer; transition: transform .18s var(--ease); }
+    .brand-logo-btn:hover { transform: scale(1.04); }
+    .logo-mark { width: 108px; height: 108px; border-radius: 22px; object-fit: contain; }
+    .brand-fallback { display: grid; place-items: center; width: 108px; height: 108px; border-radius: 24px; background: linear-gradient(135deg, #1b3585, #0f1e55); color: #ffffff; font-weight: 800; font-size: 44px; box-shadow: 0 10px 24px rgba(15, 30, 85, 0.24); }
+    .nav { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100%; }
+    .nav button {
+      position: relative;
+      width: 74px;
+      height: 74px;
+      display: grid;
+      place-items: center;
+      padding: 0;
+      color: #64748b;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 22px;
+      transition: all .2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .nav button:hover {
+      color: var(--brand);
+      background: rgba(15, 30, 85, 0.07);
+      transform: translateY(-2px);
+    }
+    .nav button.active {
+      color: #ffffff;
+      background: linear-gradient(135deg, #182d73 0%, #0f1e55 100%);
+      box-shadow: 0 12px 28px -2px rgba(15, 30, 85, 0.45), 0 4px 12px rgba(15, 30, 85, 0.22);
+      border-color: transparent;
+    }
+    .nav button.active:hover {
+      background: linear-gradient(135deg, #1e378c 0%, #132463 100%);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+    /* 3x Larger Icon Size (60px) */
+    .nav-icon { width: 58px; height: 58px; color: currentColor; display: grid; place-items: center; flex-shrink: 0; }
+    .nav-icon svg { width: 58px; height: 58px; stroke-width: 1.85; }
+    .nav button.active .nav-icon svg { stroke-width: 2.1; }
+
+    /* Right-side Tooltips */
+    .nav button[data-tooltip]::after,
+    .sidebar-lock-btn[data-tooltip]::after,
+    .sidebar-action-btn[data-tooltip]::after,
+    .sidebar-avatar-btn[data-tooltip]::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: calc(100% + 14px);
+      top: 50%;
+      transform: translateY(-50%) scale(0.92);
+      transform-origin: left center;
+      background: #0f1e55;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+      padding: 7px 12px;
+      border-radius: 9px;
+      box-shadow: 0 8px 22px rgba(15, 30, 85, 0.28);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.18s cubic-bezier(0.4, 0, 0.2, 1), transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 50;
+    }
+    .nav button[data-tooltip]::before,
+    .sidebar-lock-btn[data-tooltip]::before,
+    .sidebar-action-btn[data-tooltip]::before,
+    .sidebar-avatar-btn[data-tooltip]::before {
+      content: '';
+      position: absolute;
+      left: calc(100% + 7px);
+      top: 50%;
+      transform: translateY(-50%);
+      border-width: 6px 7px 6px 0;
+      border-style: solid;
+      border-color: transparent #0f1e55 transparent transparent;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 50;
+    }
+    .nav button[data-tooltip]:hover::after,
+    .nav button[data-tooltip]:hover::before,
+    .sidebar-lock-btn[data-tooltip]:hover::after,
+    .sidebar-lock-btn[data-tooltip]:hover::before,
+    .sidebar-action-btn[data-tooltip]:hover::after,
+    .sidebar-action-btn[data-tooltip]:hover::before,
+    .sidebar-avatar-btn[data-tooltip]:hover::after,
+    .sidebar-avatar-btn[data-tooltip]:hover::before {
+      opacity: 1;
+      transform: translateY(-50%) scale(1);
+    }
+
+    .sidebar-spacer { flex: 1; min-height: 12px; }
+    .sidebar-bottom { display: flex; flex-direction: column; align-items: center; width: 100%; padding-bottom: 12px; }
+    .sidebar-crumbs { display: none; }
+    .sidebar-actions-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      margin-bottom: 6px;
+    }
+    .sidebar-action-btn {
+      position: relative;
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      background: #f8fafc;
+      color: #64748b;
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all .18s var(--ease);
+      padding: 0;
+    }
+    .sidebar-action-btn:hover {
+      color: var(--brand);
+      background: #ffffff;
+      border-color: rgba(15, 30, 85, 0.25);
+      box-shadow: 0 4px 12px rgba(15, 30, 85, 0.08);
+      transform: translateY(-2px);
+    }
+    .sidebar-action-btn svg, .sidebar-action-btn [data-icon] svg {
+      width: 19px;
+      height: 19px;
+      stroke-width: 2;
+    }
+    .sidebar-action-btn .badge-dot {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #ef4444;
+      border: 1.5px solid #ffffff;
+    }
+    .sidebar-avatar-btn {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      background: transparent;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      padding: 0;
+      margin-bottom: 6px;
+      transition: transform .18s var(--ease);
+    }
+    .sidebar-avatar-btn:hover {
+      transform: translateY(-2px);
+    }
+    .sidebar-avatar-btn .avatar {
+      width: 40px;
+      height: 40px;
+      font-size: 12px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #182d73 0%, #0f1e55 100%);
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      box-shadow: 0 4px 12px rgba(15, 30, 85, 0.22);
+    }
+    .sidebar-avatar-btn .status-dot {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #10b981;
+      border: 2px solid #ffffff;
+      box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.3);
+    }
+    .sidebar-divider { width: 44px; height: 1.5px; background: rgba(15, 30, 85, 0.12); margin: 4px 0 8px; }
+    .sidebar-lock-btn {
+      position: relative;
+      width: 72px;
+      height: 56px;
+      border-radius: 18px;
+      border: 2px dashed rgba(15, 30, 85, 0.28);
+      background: transparent;
+      color: #64748b;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .sidebar-lock-btn:hover {
+      border-color: var(--brand);
+      color: var(--brand);
+      background: rgba(15, 30, 85, 0.06);
+      transform: translateY(-2px);
+    }
+    .sidebar-lock-btn .nav-icon { width: 42px; height: 42px; }
+    .sidebar-lock-btn .nav-icon svg { width: 42px; height: 42px; stroke-width: 1.85; }
+    .avatar { width: 34px; height: 34px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 50%; background: var(--brand); border: 1px solid var(--highlight); color: var(--blue); font-size: 10px; font-weight: 800; }
+
+    /* Main Content Area */
+    .main { min-width: 0; flex: 1; width: 100%; background: #f8fafc; }
+    .topbar { display: none; }
+    .content { width: 100%; max-width: none; padding: 28px 36px 48px; box-sizing: border-box; }
+
+    /* Page Heading & Actions */
+    .page-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
+    .actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+    .btn { height: 38px; display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 0 16px; color: var(--blue); background: #ffffff; border: 1px solid rgba(226, 232, 240, 0.9); border-radius: 11px; font-weight: 600; font-size: 12.5px; box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03); transition: transform .18s var(--ease), box-shadow .18s var(--ease), background .18s var(--ease); white-space: nowrap; }
+    .btn:hover { transform: translateY(-1px); background: #f8fafc; }
+    .btn.primary { color: #ffffff; background: var(--brand); border-color: transparent; box-shadow: 0 6px 16px -2px rgba(15, 30, 85, 0.35); }
+    .btn.primary:hover { background: #172d73; }
+    .btn.danger { color: var(--error); }
+    .btn.small { height: 32px; padding: 0 11px; font-size: 11.5px; border-radius: 9px; }
+
+    .icon, [data-icon] { width: 15px; height: 15px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .icon svg, [data-icon] svg { width: 100%; height: 100%; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; display: block; }
+
+    /* Filter Toolbar */
+    .toolbar { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    .toolbar > .search { flex: 1 1 260px; min-width: 200px; }
+    .toolbar > .select-like, .toolbar > .btn { height: 38px; }
+    .search { height: 38px; display: flex; align-items: center; gap: 8px; padding: 0 12px; background: #ffffff; border: 1px solid rgba(226, 232, 240, 0.9); border-radius: 11px; box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03); }
+    .search input { width: 100%; color: #0f172a; background: none; border: 0; outline: 0; font-size: 12.5px; }
+    .search input::placeholder { color: var(--muted); }
+    .select-like { height: 38px; display: inline-flex; align-items: center; gap: 8px; padding: 0 14px; color: #475569; background: #ffffff; border: 1px solid rgba(226, 232, 240, 0.9); border-radius: 11px; font-size: 12px; font-weight: 500; box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03); cursor: pointer; white-space: nowrap; }
+
+    /* Surface & Panels */
+    .surface { background: #ffffff; border: 1px solid rgba(226, 232, 240, 0.85); border-radius: 18px; box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04); isolation: isolate; }
+    .panel { padding: 22px 24px; }
+    .panel-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
+    .panel-subtitle { margin-top: 3px; color: #8593a8; font-size: 12px; font-weight: 400; }
+    .panel-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; color: var(--blue); border: 0; background: transparent; font-size: 12px; font-weight: 600; padding: 0; cursor: pointer; }
+
+    .dashboard-grid, .bottom-grid, .detail-grid, .review-layout, .inbox-layout, .settings-layout { display: grid; gap: 20px; }
+    .dashboard-grid { grid-template-columns: 1.6fr 1fr; }
+    .bottom-grid { grid-template-columns: 1.6fr 1fr; margin-top: 20px; }
+    .detail-grid { grid-template-columns: 1.05fr .7fr; }
+    .review-layout { grid-template-columns: .75fr 1.15fr; }
+    .inbox-layout { grid-template-columns: .85fr 1fr; }
+    .settings-layout { grid-template-columns: 240px 1fr; }
+    .review-layout > .panel, .inbox-layout > .panel { min-width: 0; }
+
+    /* Metrics Grid */
+    .metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-bottom: 22px; }
+    .metric { min-height: 116px; padding: 18px 20px; border-radius: 18px; background: #ffffff; border: 1px solid rgba(226, 232, 240, 0.85); box-shadow: 0 4px 16px rgba(15, 30, 85, 0.03); display: flex; flex-direction: column; justify-content: space-between; transition: transform .18s var(--ease), box-shadow .18s var(--ease); }
+    .metric:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(15, 30, 85, 0.06); }
+    .metric:first-child { background: linear-gradient(135deg, #182d73 0%, #0f1e55 100%); color: #ffffff; border-color: transparent; box-shadow: 0 10px 24px -2px rgba(15, 30, 85, 0.35); }
+    .metric:first-child .metric-head-label { color: rgba(255, 255, 255, 0.85); }
+    .metric:first-child .metric-value { color: #ffffff; }
+    .metric:first-child .metric-detail { color: rgba(255, 255, 255, 0.75); }
+    .metric:first-child .metric-pill { background: rgba(255, 255, 255, 0.2); color: #ffffff; }
+    .metric-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 4px; }
+    .metric-head-label { font-size: 13px; font-weight: 500; color: #64748b; }
+    .metric-pill { font-size: 11px; font-weight: 600; padding: 2.5px 8.5px; border-radius: 9999px; background: rgba(35, 134, 83, 0.1); color: var(--success); }
+    .metric-value { font-size: 24px; font-weight: 750; letter-spacing: -.03em; margin: 4px 0 6px; line-height: 1.15; color: #0f172a; }
+    .metric-detail { font-size: 11.5px; color: #8593a8; display: flex; align-items: center; gap: 5px; }
+
+    /* Indicators & Badges */
+    .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .blue { background: var(--blue); } .green { background: var(--success); } .yellow { background: var(--warning); } .red { background: var(--error); } .gray { background: var(--muted); }
+
+    .badge { display: inline-flex; align-items: center; gap: 6px; height: 26px; padding: 0 10px; border-radius: 999px; background: rgba(255,255,255,.7); border: 1px solid rgba(15,30,85,.13); box-shadow: 0 5px 14px rgba(15,30,85,.07), inset 0 1px 0 rgba(255,255,255,.9); color: var(--blue); font-size: 10px; font-weight: 700; white-space: nowrap; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); flex-shrink: 0; }
+    .badge.success { color: var(--success); }
+    .badge.warning { color: var(--warning); }
+    .badge.error { color: var(--error); }
+    .badge.neutral { color: var(--muted); }
+
+    /* Overview Chart, Review, Activity & AI Status */
+    .chart { min-height: 290px; }
+    .chart-head-right { text-align: right; }
+    .chart-total { font-size: 24px; font-weight: 800; line-height: 1; }
+    .chart-total-label { color: var(--muted); font-size: 10px; text-transform: uppercase; margin-top: 2px; }
+    .bars { height: 180px; display: flex; align-items: end; justify-content: space-around; gap: 20px; padding: 16px 16px 0; border-bottom: 1px solid var(--line); }
+    .bar-wrap { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: end; gap: 10px; flex: 1; }
+    .bar { width: 44px; max-width: 80%; min-height: 18px; border-radius: 8px 8px 3px 3px; box-shadow: -3px -3px 7px rgba(116,165,255,.15), 4px 4px 7px rgba(8,15,50,.46); }
+    .bar-label { color: var(--muted); font-size: 9px; font-weight: 700; text-align: center; }
+    .legend { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 18px; color: var(--muted); font-size: 11px; }
+    .legend span { display: inline-flex; align-items: center; gap: 6px; }
+
+    .review-list { display: flex; flex-direction: column; gap: 0; }
+    .review-row { display: grid; grid-template-columns: 10px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .review-row:last-child { border-bottom: 0; }
+    .review-title { font-size: 12px; font-weight: 700; line-height: 1.3; }
+    .review-meta { margin-top: 3px; color: var(--muted); font-size: 11px; }
+
+    .activity-list { display: flex; flex-direction: column; gap: 14px; }
+    .activity-row { display: grid; grid-template-columns: 10px minmax(0, 1fr); align-items: flex-start; gap: 12px; }
+    .activity-row .dot { margin-top: 6px; }
+    .activity-title { font-size: 12px; font-weight: 600; line-height: 1.3; }
+    .activity-time { color: var(--muted); font-size: 11px; margin-top: 3px; }
+
+    .ai-status { display: flex; align-items: center; gap: 8px; color: var(--success); font-size: 13px; font-weight: 700; margin-bottom: 20px; }
+    .split-stats { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+    .split-stats .value { font-size: 18px; font-weight: 800; }
+    .split-stats .small { color: var(--muted); font-size: 11px; }
+    .progress { height: 8px; margin: 12px 0 20px; overflow: hidden; border-radius: 10px; background: var(--inset); }
+    .progress > span { display: block; width: 96.4%; height: 100%; background: var(--success); border-radius: inherit; box-shadow: 0 0 10px rgba(113,211,155,.24); }
+
+    /* Data Tables */
+    .table-wrap { padding: 0; overflow-x: auto; border-radius: var(--radius-lg); }
+    .data-table { width: 100%; border-collapse: collapse; min-width: 860px; }
+    .data-table th { padding: 18px 20px 14px; color: var(--muted); font-size: 10px; text-align: left; letter-spacing: .08em; font-weight: 800; border-bottom: 1px solid var(--line); }
+    .data-table td { padding: 16px 20px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+    .data-table tbody tr:last-child td { border-bottom: 0; }
+    .data-table tbody tr:hover { background: rgba(116,165,255,.08); }
+    .cell-title { font-size: 12px; font-weight: 700; line-height: 1.3; }
+    .cell-meta { color: var(--muted); font-size: 11px; margin-top: 3px; }
+    .cell-muted { color: var(--muted); font-size: 12px; }
+    .cell-blue { color: var(--blue); font-size: 11px; font-weight: 600; }
+    .row-actions { width: 36px; height: 36px; display: inline-grid; place-items: center; border: 0; color: var(--muted); background: transparent; border-radius: 8px; padding: 0; transition: .15s var(--ease); }
+    .row-actions:hover { color: var(--ink); background: rgba(255,255,255,.7); }
+
+    /* Tabs & Details */
+    .tabs { display: flex; gap: 24px; overflow-x: auto; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+    .tab { position: relative; padding: 0 0 12px; color: var(--muted); border: 0; background: none; white-space: nowrap; font-size: 13px; font-weight: 600; transition: color .15s var(--ease); }
+    .tab:hover { color: var(--ink); }
+    .tab.active { color: var(--blue); font-weight: 700; }
+    .tab.active::after { content: ""; position: absolute; height: 3px; left: 0; right: 0; bottom: -1px; border-radius: 3px; background: var(--blue); }
+
+    .detail-summary { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px 20px; margin-bottom: 24px; }
+    .field-value { margin-top: 6px; font-size: 13px; font-weight: 650; }
+    .field-desc { grid-column: 1 / -1; color: var(--muted); font-size: 12px; margin-top: 6px; padding-top: 14px; border-top: 1px solid var(--line); line-height: 1.5; }
+
+    .timeline-list { display: flex; flex-direction: column; gap: 0; margin-bottom: 20px; }
+    .timeline-row { position: relative; display: grid; grid-template-columns: 20px 1fr; gap: 14px; min-height: 68px; padding-bottom: 16px; }
+    .timeline-row::before { content: ""; position: absolute; width: 2px; top: 16px; bottom: 0; left: 9px; background: var(--line); }
+    .timeline-row:last-child { min-height: auto; padding-bottom: 0; }
+    .timeline-row:last-child::before { display: none; }
+    .timeline-dot { position: relative; z-index: 1; width: 12px; height: 12px; margin-top: 3px; border-radius: 50%; background: var(--blue); border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--highlight); justify-self: center; }
+    .timeline-dot.green { background: var(--success); }
+    .timeline-dot.yellow { background: var(--warning); }
+    .timeline-title { font-size: 13px; font-weight: 700; line-height: 1.3; }
+    .timeline-meta { margin-top: 3px; color: var(--muted); font-size: 11px; }
+
+    .note { padding: 16px 18px; background: rgba(241,245,251,.66); border: 1px solid rgba(15,30,85,.11); border-radius: 12px; box-shadow: inset 2px 2px 7px rgba(15,30,85,.045), inset -2px -2px 7px rgba(255,255,255,.88); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    .note p { margin-top: 6px; color: var(--ink); font-size: 12px; line-height: 1.5; }
+
+    .person { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
+    .person-name { font-size: 13px; font-weight: 700; line-height: 1.2; }
+    .person-role { color: var(--muted); margin-top: 2px; font-size: 11px; }
+
+    .steps { display: flex; flex-direction: column; gap: 0; margin-bottom: 22px; }
+    .step { position: relative; display: flex; align-items: center; gap: 12px; min-height: 44px; }
+    .step::before { content: ""; position: absolute; left: 6px; top: 22px; bottom: -22px; width: 2px; background: var(--line); }
+    .step:last-child::before { display: none; }
+    .step-dot { position: relative; z-index: 1; width: 14px; height: 14px; border: 2px solid var(--line); border-radius: 50%; background: var(--inset); }
+    .step.done .step-dot { background: var(--success); border-color: var(--success); }
+    .step-label { font-size: 12px; color: var(--muted); font-weight: 500; }
+    .step.done .step-label { color: var(--ink); font-weight: 650; }
+
+    .attachment { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: rgba(241,245,251,.66); border: 1px solid rgba(15,30,85,.11); border-radius: 12px; box-shadow: inset 2px 2px 7px rgba(15,30,85,.045), inset -2px -2px 7px rgba(255,255,255,.88); margin-bottom: 18px; }
+    .attachment-main { font-size: 12px; font-weight: 700; line-height: 1.2; }
+    .attachment-meta { color: var(--muted); font-size: 11px; margin-top: 3px; }
+
+    /* Report Review Components */
+    .source-info { display: flex; flex-direction: column; gap: 3px; margin: 12px 0 16px; }
+    .source-sender { color: var(--ink); font-weight: 700; font-size: 12px; }
+    .source-meta { color: var(--muted); font-size: 11px; }
+    .source-message { padding: 16px 18px; background: rgba(241,245,251,.66); border: 1px solid rgba(15,30,85,.11); border-radius: 12px; color: var(--ink); font-size: 12px; line-height: 1.5; box-shadow: inset 2px 2px 7px rgba(15,30,85,.045), inset -2px -2px 7px rgba(255,255,255,.88); margin-bottom: 20px; }
+    .photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; margin-bottom: 18px; }
+    .photo { min-height: 84px; position: relative; overflow: hidden; display: flex; align-items: end; padding: 9px; border: 1px solid var(--highlight); border-radius: 11px; background: var(--brand); color: var(--muted); font-size: 10px; font-weight: 600; }
+    .photo::before { content: ""; position: absolute; width: 70px; height: 34px; left: 23px; top: 23px; border-radius: 6px; background: var(--navy); box-shadow: 0 0 0 5px rgba(116,165,255,.08); }
+    .photo::after { content: ""; position: absolute; width: 46px; height: 3px; left: 35px; top: 51px; border-radius: 4px; background: var(--blue); opacity: .55; }
+    .audio { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: rgba(241,245,251,.66); border: 1px solid rgba(15,30,85,.11); border-radius: 12px; box-shadow: inset 2px 2px 7px rgba(15,30,85,.045), inset -2px -2px 7px rgba(255,255,255,.88); margin-bottom: 16px; }
+    .audio-name { font-size: 11px; font-weight: 650; }
+    .audio-duration { color: var(--muted); font-size: 10px; margin-top: 2px; }
+
+    .draft-head { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+    .draft-title { margin-top: 6px; font-size: 20px; font-weight: 800; letter-spacing: -.03em; }
+    .draft-meta { margin-top: 4px; color: var(--muted); font-size: 11px; }
+    .draft-section { padding: 18px 0; border-bottom: 1px solid var(--line); }
+    .draft-section:last-of-type { border-bottom: 0; }
+    .draft-section h3 { color: var(--blue); font-size: 12px; font-weight: 700; }
+    .draft-section p { margin-top: 6px; color: var(--ink); font-size: 12px; max-width: 680px; line-height: 1.55; }
+    .warning-box { display: flex; align-items: flex-start; gap: 12px; margin-top: 20px; padding: 14px 16px; background: rgba(241,245,251,.66); border: 1px solid var(--warning); border-radius: 12px; box-shadow: inset 2px 2px 7px rgba(15,30,85,.045), inset -2px -2px 7px rgba(255,255,255,.88); }
+    .warning-box strong { display: block; color: var(--warning); font-size: 12px; line-height: 1.3; }
+    .warning-box p { margin-top: 3px; color: var(--muted); font-size: 11px; line-height: 1.4; }
+
+    /* AI Inbox Components */
+    .message-items { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+    .message-item { display: grid; grid-template-columns: 36px minmax(0, 1fr) auto; gap: 12px; padding: 12px; border: 1px solid transparent; border-radius: 12px; text-align: left; background: none; color: inherit; align-items: flex-start; transition: .15s var(--ease); }
+    .message-item:hover, .message-item.selected { background: var(--surface-2); border-color: var(--highlight); }
+    .message-preview { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+    .message-sender { font-size: 12px; font-weight: 700; line-height: 1.2; }
+    .message-snippet { overflow: hidden; color: var(--muted); font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+    .message-preview .badge { align-self: flex-start; margin-top: 3px; }
+    .message-time { color: var(--muted); font-size: 10px; white-space: nowrap; margin-top: 2px; }
+
+    .inbox-detail { display: flex; flex-direction: column; gap: 20px; }
+    .inbox-section { display: flex; flex-direction: column; gap: 8px; }
+    .inbox-sender-name { font-size: 18px; font-weight: 750; letter-spacing: -.02em; line-height: 1.2; }
+    .message-bubble { padding: 16px 18px; background: rgba(241,245,251,.66); border: 1px solid rgba(15,30,85,.11); border-radius: 14px; font-size: 12px; line-height: 1.5; box-shadow: inset 2px 2px 7px rgba(15,30,85,.045), inset -2px -2px 7px rgba(255,255,255,.88); margin-top: 4px; }
+    .linked { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: var(--surface-2); border: 1px solid var(--highlight); border-radius: 13px; margin-top: 4px; }
+    .linked-title { font-size: 12px; font-weight: 700; line-height: 1.2; }
+    .linked-meta { color: var(--muted); font-size: 11px; margin-top: 2px; }
+    .linked .badge { margin-left: auto; }
+    .inbox-desc { font-size: 12px; color: var(--ink); line-height: 1.5; margin: 2px 0 0; }
+    .inbox-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+    .inbox-audit-note { margin-top: 6px; }
+
+    /* Customers Components */
+    .customer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .customer-card { padding: 22px; }
+    .customer-header { display: flex; align-items: center; gap: 12px; }
+    .customer-avatar { width: 44px; height: 44px; border-radius: 12px; font-size: 13px; }
+    .customer-header h2 { font-size: 15px; }
+    .customer-header .row-actions { margin-left: auto; }
+    .customer-divider { height: 1px; background: var(--line); margin: 18px 0; }
+    .customer-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    /* Settings Components */
+    .settings-nav { display: flex; flex-direction: column; gap: 4px; padding: 18px 16px; height: fit-content; }
+    .settings-link { display: flex; align-items: center; gap: 10px; width: 100%; padding: 10px 12px; color: var(--muted); border: 1px solid transparent; border-radius: 11px; background: transparent; text-align: left; font-size: 12px; font-weight: 600; transition: .15s var(--ease); }
+    .settings-link:hover { color: var(--ink); background: rgba(255,255,255,.5); }
+    .settings-link.active { color: var(--ink); background: var(--surface-2); border-color: var(--highlight); font-weight: 700; }
+    .settings-divider { height: 1px; background: var(--line); margin: 16px 0; }
+    .settings-field { margin: 0 6px 14px; }
+    .settings-field:last-child { margin-bottom: 4px; }
+    .settings-field .value { margin-top: 5px; font-size: 12px; font-weight: 700; }
+    .settings-field .badge { margin-top: 5px; }
+
+    .settings-content { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+    .member-row { display: grid; grid-template-columns: minmax(0, 1fr) 140px 120px 36px; align-items: center; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .member-row:last-child { border-bottom: 0; }
+    .member-header { padding: 0 0 14px; color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .08em; }
+    .member { display: flex; align-items: center; gap: 10px; }
+    .member-name { font-size: 12px; font-weight: 700; line-height: 1.2; }
+    .member-email { color: var(--muted); font-size: 11px; margin-top: 2px; }
+
+    .integration-row { display: flex; align-items: center; gap: 14px; padding: 14px 16px; background: var(--surface-2); border: 1px solid var(--highlight); border-radius: 13px; }
+    .integration-title { font-size: 12px; font-weight: 700; line-height: 1.2; }
+    .integration-meta { color: var(--muted); font-size: 11px; margin-top: 2px; }
+    .integration-row .badge { margin-left: auto; }
+    .integration-actions { margin-top: 18px; }
+    .integration-desc { margin-top: 16px; }
+
+    /* Toast Notification */
+    .hidden { display: none !important; }
+    .toast { position: fixed; z-index: 20; right: 24px; bottom: 24px; max-width: 380px; padding: 12px 18px; color: var(--ink); background: var(--surface-2); border: 1px solid var(--highlight); border-radius: 12px; box-shadow: -5px -5px 12px rgba(52,80,156,.15), 7px 7px 14px rgba(8,15,50,.62); transform: translateY(20px); opacity: 0; pointer-events: none; transition: .25s var(--ease); font-size: 12px; font-weight: 600; }
+    .toast.show { transform: translateY(0); opacity: 1; }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 1180px) {
+      .sidebar { width: 136px; flex-basis: 136px; padding: 20px 8px; }
+      .nav button, .sidebar-lock-btn { width: 68px; height: 68px; border-radius: 18px; }
+      .brand-logo-btn { width: 84px; height: 84px; border-radius: 20px; }
+      .nav-icon, .nav-icon svg, .sidebar-lock-btn .nav-icon, .sidebar-lock-btn .nav-icon svg { width: 50px; height: 50px; }
+      .logo-mark, .brand-fallback { width: 72px; height: 72px; border-radius: 18px; }
+      .content { padding: 20px 20px 36px; }
+      .metrics { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+      .dashboard-grid, .bottom-grid, .detail-grid, .review-layout, .inbox-layout { grid-template-columns: 1fr; gap: 20px; }
+      .detail-summary { grid-template-columns: repeat(3, 1fr); }
+      .customer-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      .app { display: block; }
+      .sidebar { width: 100%; min-height: auto; height: auto; position: static; padding: 10px 14px; border-right: 0; border-bottom: 1px solid var(--line); flex-direction: row; justify-content: space-between; align-items: center; }
+      .brand { padding: 0; width: auto; }
+      .brand-logo-btn { width: 64px; height: 64px; }
+      .logo-mark, .brand-fallback { width: 54px; height: 54px; border-radius: 15px; }
+      .nav { flex-direction: row; gap: 8px; width: auto; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
+      .nav::-webkit-scrollbar { display: none; }
+      .nav button { width: 52px; height: 52px; border-radius: 15px; }
+      .nav-icon, .nav-icon svg { width: 36px; height: 36px; }
+      .nav button[data-tooltip]::before, .nav button[data-tooltip]::after,
+      .sidebar-lock-btn[data-tooltip]::before, .sidebar-lock-btn[data-tooltip]::after,
+      .sidebar-action-btn[data-tooltip]::before, .sidebar-action-btn[data-tooltip]::after,
+      .sidebar-avatar-btn[data-tooltip]::before, .sidebar-avatar-btn[data-tooltip]::after { display: none !important; }
+      .sidebar-spacer, .sidebar-divider, .sidebar-crumbs { display: none; }
+      .sidebar-bottom { width: auto; padding: 0; display: flex; flex-direction: row; align-items: center; gap: 6px; }
+      .sidebar-actions-row { width: auto; margin-bottom: 0; gap: 6px; }
+      .sidebar-action-btn { width: 36px; height: 36px; border-radius: 10px; }
+      .sidebar-action-btn svg, .sidebar-action-btn [data-icon] svg { width: 17px; height: 17px; }
+      .sidebar-avatar-btn { width: 36px; height: 36px; margin: 0; }
+      .sidebar-avatar-btn .avatar { width: 34px; height: 34px; font-size: 11px; }
+      .sidebar-lock-btn { width: 44px; height: 44px; border-radius: 12px; margin: 0; }
+      .sidebar-lock-btn .nav-icon, .sidebar-lock-btn .nav-icon svg { width: 28px; height: 28px; }
+      .content { padding: 32px 16px 40px; }
+      .page-heading { display: flex; flex-direction: row; align-items: center; gap: 16px; margin-bottom: 32px; }
+      .page-heading > div:first-child { min-width: 0; flex: 1 1 auto; }
+      .page-heading .actions { justify-content: flex-end; gap: 8px; margin-left: auto; }
+      .page-heading .actions > * { flex: 0 0 auto; }
+      .page-heading h1 { font-size: 26px; }
+      .page-heading .subtitle { max-width: 260px; }
+      .page-heading .btn { min-height: 44px; }
+      .page-heading .badge { display: none; }
+      .crumbs { display: none; }
+      .toolbar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-bottom: 20px; }
+      .toolbar > .search { grid-column: 1 / -1; width: 100%; min-width: 0; }
+      .toolbar > .select-like, .toolbar > .btn { width: 100%; min-width: 0; justify-content: center; }
+      .toolbar > .btn:last-child { grid-column: 1 / -1; }
+      .toolbar-meta { display: none; }
+      .metrics { grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+      .metric { min-height: 104px; padding: 14px; }
+      .metric-value { font-size: 24px; }
+      .panel { padding: 18px 16px; }
+      .panel-head { margin-bottom: 18px; }
+      .bottom-grid { margin-top: 16px; }
+      .detail-summary { grid-template-columns: repeat(2, 1fr); gap: 14px; padding: 18px 16px; }
+      .settings-layout { grid-template-columns: 1fr; gap: 18px; }
+      .settings-nav { display: flex; flex-direction: row; overflow-x: auto; gap: 6px; padding: 12px; }
+      .settings-link { width: auto; white-space: nowrap; }
+      .settings-divider, .settings-field { display: none; }
+      .member-row { grid-template-columns: minmax(0, 1fr) 100px 30px; gap: 10px; }
+      .member-row > :nth-child(3) { display: none; }
+      .bars { gap: 10px; padding: 12px 0 0; }
+      .bar { width: 32px; }
+      .table-wrap { padding: 12px; }
+      .data-table { display: block; width: 100%; min-width: 0; }
+      .data-table thead { display: none; }
+      .data-table tbody { display: grid; gap: 10px; }
+      .data-table tr { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; padding: 14px; background: rgba(255,255,255,.62); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 4px 12px rgba(15,30,85,.04); }
+      .data-table td { display: flex; min-width: 0; min-height: 0; padding: 0 !important; border: 0 !important; flex-direction: column; align-items: flex-start; gap: 3px; }
+      .data-table td:first-child { grid-column: 1 / -1; padding-right: 36px !important; }
+      .data-table td:nth-child(2)::before { content: 'PELANGGAN'; }
+      .data-table td:nth-child(3)::before { content: 'TEKNISI'; }
+      .data-table td:nth-child(4)::before { content: 'TANGGAL'; }
+      .data-table td:nth-child(5)::before { content: 'STATUS'; }
+      .data-table td:nth-child(6)::before { content: 'LAPORAN'; }
+      .data-table td:not(:first-child)::before { color: var(--muted); font-size: 9px; font-weight: 800; letter-spacing: .08em; }
+      .data-table td:last-child { position: absolute; top: 10px; right: 10px; }
+      .data-table td:last-child::before { display: none; }
+      .data-table td:last-child .row-actions { width: 32px; height: 32px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+    }
+    @media (prefers-reduced-transparency: reduce) {
+      .surface, .btn, .search, .select-like, .account, .nav button.active, .icon-button:hover, .badge, .note, .message-bubble, .linked, .audio, .attachment, .warning-box { backdrop-filter: none; -webkit-backdrop-filter: none; background: #fff; }
+    }
+
+    /* Stable navigation hover: keep the icon visible and prevent the item from fading or jumping. */
+    .sidebar { position: relative; z-index: 20; overflow: visible; }
+    .nav { position: relative; z-index: 21; overflow: visible; }
+    .nav button,
+    .nav button:hover,
+    .nav button.active,
+    .nav button.active:hover {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+    }
+    .nav button {
+      color: #64748b;
+      background: transparent;
+      border-color: transparent;
+      isolation: isolate;
+    }
+    .nav button:hover {
+      color: #0F1E55;
+      background: #EEF1F6;
+      border-color: rgba(15,30,85,.10);
+      box-shadow: 0 6px 16px rgba(15,30,85,.10), inset 0 1px 0 rgba(255,255,255,.9);
+    }
+    .nav button.active,
+    .nav button.active:hover {
+      color: #FFFFFF;
+      background: #0F1E55;
+      border-color: #0F1E55;
+      box-shadow: 0 8px 20px rgba(15,30,85,.22), inset 0 1px 0 rgba(255,255,255,.18);
+    }
+    .nav button .nav-icon,
+    .nav button .nav-icon svg {
+      color: inherit;
+      opacity: 1;
+      visibility: visible;
+      stroke: currentColor;
+      fill: none;
+    }
+    .nav button[data-tooltip]::after,
+    .nav button[data-tooltip]::before { z-index: 100; }
+    .nav button[data-tooltip]::before { border-left-color: transparent; border-right-color: #0F1E55; }
+    .nav button[data-tooltip]:hover::after { opacity: 1; }
+    .nav button[data-tooltip]:hover::before { opacity: 1; }
+
+    /* Compact icon scale: one step smaller with a proportionate active tile. */
+    .nav button { width: 64px; height: 64px; border-radius: 18px; }
+    .nav button .nav-icon { width: 38px; height: 38px; display: grid; place-items: center; }
+    .nav button .nav-icon svg { width: 28px; height: 28px; stroke-width: 1.85; }
+    .nav button.active .nav-icon svg { width: 30px; height: 30px; stroke-width: 1.95; }
+    .nav button:hover .nav-icon svg { opacity: 1; }
+    .header-notification { position: relative; width: 42px; height: 42px; color: var(--brand); background: rgba(255,255,255,.68); border: 1px solid rgba(15,30,85,.12); border-radius: 12px; box-shadow: 0 6px 16px rgba(15,30,85,.08); }
+    .header-notification:hover { color: var(--brand); background: #fff; }
+    .header-notification .icon { width: 18px; height: 18px; }
+    .header-notification .badge-dot { position: absolute; top: 8px; right: 8px; width: 7px; height: 7px; margin: 0; border: 2px solid #fff; border-radius: 50%; background: #d13d50; }
+    .page-heading .actions { gap: 10px; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" aria-label="Navigasi utama">
+      <div class="brand">
+        <button class="brand-logo-btn" data-route-target="overview" aria-label="BisaLapor Dashboard">
+          <img class="logo-mark" src="../designs/assets/logo-transparent.png" alt="BisaLapor" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
+          <span class="brand-fallback" style="display:none">B</span>
+        </button>
+      </div>
+      <nav class="nav" id="main-nav">
+        <button data-route="overview" data-tooltip="Overview" aria-label="Overview"><span class="nav-icon" data-icon="dashboard"></span></button>
+        <button data-route="work-orders" data-tooltip="Work Orders" aria-label="Work Orders"><span class="nav-icon" data-icon="clipboard"></span></button>
+        <button data-route="reports" data-tooltip="Reports" aria-label="Reports"><span class="nav-icon" data-icon="report"></span></button>
+        <button data-route="inbox" data-tooltip="AI Inbox" aria-label="AI Inbox"><span class="nav-icon" data-icon="inbox"></span></button>
+        <button data-route="technicians" data-tooltip="Technicians" aria-label="Technicians"><span class="nav-icon" data-icon="users"></span></button>
+        <button data-route="customers" data-tooltip="Customers" aria-label="Customers"><span class="nav-icon" data-icon="building"></span></button>
+        <button data-route="settings" data-tooltip="Settings" aria-label="Settings"><span class="nav-icon" data-icon="settings"></span></button>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-bottom">
+        <button class="sidebar-avatar-btn" data-tooltip="Rafi Pratama (Owner)" aria-label="Profil Rafi Pratama" data-action="toast" data-message="Profil Rafi Pratama · Owner Workspace">
+          <span class="avatar">RP</span>
+          <span class="status-dot"></span>
+        </button>
+      </div>
+    </aside>
+    <main class="main">
+      <section class="content" id="screen-root" aria-live="polite"></section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script>
+    const icons = {
+      dashboard: '<svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="6.5" height="6.5" rx="1.8"/><rect x="14" y="3.5" width="6.5" height="6.5" rx="1.8"/><rect x="3.5" y="14" width="6.5" height="6.5" rx="1.8"/><rect x="14" y="14" width="6.5" height="6.5" rx="1.8"/></svg>',
+      clipboard: '<svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5V3h6v1.5M8 10h8M8 14h6"/></svg>',
+      report: '<svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v5h4M9 12h6M9 16h6"/></svg>',
+      inbox: '<svg viewBox="0 0 24 24"><path d="M4 5h16v12H4z"/><path d="m4 14 4-4 4 3 3-2 5 4M8 20h8"/></svg>',
+      users: '<svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c.5-4 2.5-6 6-6s5.5 2 6 6M16 5.5a3 3 0 0 1 0 5.5M17 14c2.5.5 3.8 2.3 4 5"/></svg>',
+      building: '<svg viewBox="0 0 24 24"><path d="M4 21V4h12v17M16 9h4v12M8 8h4M8 12h4M8 16h4M9 21v-3h2v3"/></svg>',
+      settings: '<svg viewBox="0 0 24 24"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="m19.4 15 .1.1a2 2 0 1 1-2.8 2.8l-.1-.1a2 2 0 0 0-3.4 1.4V19a2 2 0 1 1-4 0v-.2a2 2 0 0 0-3.4-1.4l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A2 2 0 0 0 3.6 11H3a2 2 0 1 1 0-4h.2A2 2 0 0 0 4.6 3.6l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1A2 2 0 0 0 11 3.6V3a2 2 0 1 1 4 0v.2a2 2 0 0 0 3.4 1.4l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1A2 2 0 0 0 20.4 11h.2a2 2 0 1 1 0 4h-.2a2 2 0 0 0-1 0Z" transform="scale(.82) translate(2.2 2.2)"/></svg>',
+      'lock-open': '<svg viewBox="0 0 24 24"><rect x="5.5" y="11" width="13" height="9.5" rx="2.5"/><path d="M8 11V7.5a4 4 0 0 1 7.6-1.5"/></svg>',
+      search: '<svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>',
+      bell: '<svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>',
+      more: '<svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1" fill="currentColor"/><circle cx="12" cy="12" r="1" fill="currentColor"/><circle cx="19" cy="12" r="1" fill="currentColor"/></svg>',
+      plus: '<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>',
+      filter: '<svg viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></svg>',
+      calendar: '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18"/></svg>',
+      download: '<svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>',
+      check: '<svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg>',
+      arrow: '<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+      link: '<svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1M14 11a5 5 0 0 0-7.1-.1l-2 2a5 5 0 0 0 7.1 7.1l1.1-1.1"/></svg>',
+      play: '<svg viewBox="0 0 24 24"><path d="m9 6 9 6-9 6z"/></svg>',
+      help: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.7 9a2.4 2.4 0 1 1 3.5 2.1c-.8.4-1.2.9-1.2 1.9M12 16h.01"/></svg>',
+      refresh: '<svg viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.8-3L3 11M3 5v6h6M4 13a8 8 0 0 0 14.8 3L21 13m0 6v-6h-6"/></svg>',
+      userplus: '<svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c.5-4 2.5-6 6-6s5.5 2 6 6M19 8v6M16 11h6"/></svg>',
+      message: '<svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 10h8M8 13h5"/></svg>',
+      audio: '<svg viewBox="0 0 24 24"><path d="M4 10v4M8 7v10M12 4v16M16 7v10M20 10v4"/></svg>',
+      alert: '<svg viewBox="0 0 24 24"><path d="m12 3 9 17H3z"/><path d="M12 9v4M12 17h.01"/></svg>',
+      attachment: '<svg viewBox="0 0 24 24"><path d="m8 12 5.5-5.5a3.5 3.5 0 0 1 5 5L11 19a5 5 0 0 1-7-7l7-7"/></svg>',
+      eye: '<svg viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="2.5"/></svg>',
+      file: '<svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6zM15 3v5h4"/></svg>',
+      send: '<svg viewBox="0 0 24 24"><path d="m3 11 18-8-8 18-2-8zM3 11l8 2"/></svg>'
+    };
+    document.querySelectorAll('[data-icon]').forEach(el => { const key = el.dataset.icon; if (icons[key]) el.innerHTML = icons[key]; });
+
+    const statusClass = s => /disetujui|selesai|aktif|terhubung|normal/i.test(s) ? 'success' : /perlu|dikerjakan|processing/i.test(s) ? 'warning' : /butuh|gagal/i.test(s) ? 'error' : 'neutral';
+    const badge = (label, status = '') => `<span class="badge ${statusClass(status)}"><span class="dot ${statusClass(status) === 'success' ? 'green' : statusClass(status) === 'warning' ? 'yellow' : statusClass(status) === 'error' ? 'red' : 'blue'}"></span>${label}</span>`;
+    const actionIcon = key => `<span class="icon">${icons[key] || ''}</span>`;
+    const button = (label, opts = {}) => `<button class="btn ${opts.primary ? 'primary' : ''} ${opts.danger ? 'danger' : ''} ${opts.small ? 'small' : ''}" data-action="${opts.action || 'toast'}" ${opts.message ? `data-message="${opts.message}"` : ''} ${opts.route ? `data-route-target="${opts.route}"` : ''}>${opts.icon ? actionIcon(opts.icon) : ''}${label}</button>`;
+    const search = (placeholder, id) => `<label class="search">${actionIcon('search')}<input id="${id}" type="search" placeholder="${placeholder}" aria-label="${placeholder}" /></label>`;
+    const pageHeading = (title, subtitle, actions = '') => `<div class="page-heading"><div><h1>${title}</h1><p class="subtitle">${subtitle}</p></div><div class="actions">${actions}</div></div>`;
+    const panelHead = (title, subtitle, right = '') => `<div class="panel-head"><div><h2>${title}</h2>${subtitle ? `<p class="panel-subtitle">${subtitle}</p>` : ''}</div>${right}</div>`;
+
+    const workOrders = [
+      ['Servis AC Split 2 PK','WO-240318-017','PT Arunika','Dina K.','22 Jul 2024','Dikerjakan','Belum ada'],
+      ['Instalasi jaringan kantor','WO-240318-016','CV Nusa Data','Budi S.','22 Jul 2024','Dikerjakan','Draf'],
+      ['Maintenance genset 250 kVA','WO-240318-012','PT Sinar Jaya','Dina K.','21 Jul 2024','Dikerjakan','Perlu review'],
+      ['Perawatan chiller gedung A','WO-240318-009','PT Arunika','Rafi P.','20 Jul 2024','Dijadwalkan','Belum ada'],
+      ['Servis AC cassette lantai 3','WO-240318-004','PT Meridian','Budi S.','19 Jul 2024','Selesai','Disetujui'],
+      ['Pemeriksaan panel listrik','WO-240318-001','CV Nusa Data','Dina K.','18 Jul 2024','Selesai','Disetujui']
+    ];
+    const reports = [
+      ['Servis AC Split 2 PK','RPT-240318-017','WO-240318-017','Dina K.','2 mnt lalu','Perlu review'],
+      ['Maintenance genset 250 kVA','RPT-240318-012','WO-240318-012','Dina K.','1 jam lalu','Butuh informasi'],
+      ['Instalasi jaringan kantor','RPT-240318-016','WO-240318-016','Budi S.','3 jam lalu','Draf'],
+      ['Servis AC cassette lantai 3','RPT-240318-004','WO-240318-004','Budi S.','Kemarin','Disetujui'],
+      ['Pemeriksaan panel listrik','RPT-240318-001','WO-240318-001','Dina K.','Kemarin','Disetujui']
+    ];
+
+    function overviewScreen() {
+      const metricData = [
+        ['Pekerjaan aktif', '12', '+3 dari minggu lalu', '+24%'],
+        ['Menunggu review', '07', '2 membutuhkan perhatian', '+18%'],
+        ['Butuh informasi', '03', 'Teknisi perlu melengkapi', '+12%'],
+        ['Disetujui minggu ini', '36', '92% tanpa revisi', 'Aman ✓']
+      ];
+      return pageHeading('Overview', 'Selamat datang, Rafi Pratama! Pantau ringkasan performa operasional secara realtime.', `<button class="icon-button header-notification" aria-label="Notifikasi" data-action="toast" data-message="Tidak ada notifikasi baru.">${actionIcon('bell')}<span class="badge-dot"></span></button><button class="select-like" data-action="toast" data-message="Pemilih rentang tanggal dibuka.">${actionIcon('calendar')}Hari Ini</button>` + button('Buat work order', {primary:true, icon:'plus', message:'Form work order baru siap dibuka.'})) + `
+        <div class="metrics">
+          ${metricData.map(x => `
+            <article class="surface metric">
+              <div class="metric-head">
+                <span class="metric-head-label">${x[0]}</span>
+                <span class="metric-pill">${x[3]}</span>
+              </div>
+              <div class="metric-value">${x[1]}</div>
+              <div class="metric-detail">${x[2]}</div>
+            </article>
+          `).join('')}
+        </div>
+        <div class="dashboard-grid">
+          <article class="surface panel chart">${panelHead('Status pekerjaan','Distribusi work order minggu ini','<div class="chart-head-right"><div class="chart-total">42</div><div class="chart-total-label">total</div></div>')}<div class="bars"><div class="bar-wrap"><div class="bar" style="height:34%;background:var(--blue)"></div><div class="bar-label">OPEN</div></div><div class="bar-wrap"><div class="bar" style="height:49%;background:var(--blue)"></div><div class="bar-label">ASSIGNED</div></div><div class="bar-wrap"><div class="bar" style="height:68%;background:var(--warning)"></div><div class="bar-label">IN PROGRESS</div></div><div class="bar-wrap"><div class="bar" style="height:88%;background:var(--success)"></div><div class="bar-label">COMPLETED</div></div></div><div class="legend"><span><i class="dot blue"></i>Open</span><span><i class="dot yellow"></i>Dikerjakan</span><span><i class="dot green"></i>Selesai</span></div></article>
+          <article class="surface panel">${panelHead('Antrean review','Laporan yang perlu ditinjau hari ini','<span style="color:var(--blue);font-size:11px;font-weight:700">7 laporan</span>')}<div class="review-list">${[['Servis AC Split 2 PK','WO-240318-017','Perlu review'],['Maintenance genset 250 kVA','WO-240318-012','Butuh info'],['Perawatan chiller gedung A','WO-240318-009','Draf siap']].map(x => `<div class="review-row"><span class="dot ${statusClass(x[2]) === 'warning' ? 'yellow' : statusClass(x[2]) === 'error' ? 'red' : 'blue'}"></span><div><div class="review-title">${x[0]}</div><div class="review-meta">${x[1]}</div></div>${badge(x[2],x[2])}</div>`).join('')}</div><button class="panel-link" data-route-target="reports">Lihat semua laporan →</button></article>
+        </div>
+        <div class="bottom-grid"><article class="surface panel">${panelHead('Aktivitas terbaru','Perubahan terakhir di workspace')}<div class="activity-list">${[['Rafi menyetujui laporan WO-240318-004','2 menit lalu','green'],['Dina mengirim 3 foto dokumentasi','18 menit lalu','blue'],['AI menandai 2 informasi belum lengkap','1 jam lalu','yellow'],['Work order baru dibuat oleh Rafi','2 jam lalu','blue']].map(x => `<div class="activity-row"><span class="dot ${x[2]}"></span><div><div class="activity-title">${x[0]}</div><div class="activity-time">${x[1]}</div></div></div>`).join('')}</div></article><article class="surface panel">${panelHead('AI processing','Status layanan hari ini')}<div class="ai-status"><span class="dot green"></span>Berjalan normal</div><div class="split-stats"><div class="small">Keberhasilan proses</div><div class="value">96.4%</div></div><div class="progress"><span></span></div><div class="split-stats"><div class="small">Estimasi biaya hari ini</div><div class="value" style="font-size:14px">Rp 48.200</div></div></article></div>`;
+    }
+
+    function workOrdersScreen() {
+      return pageHeading('Work Orders','Kelola seluruh pekerjaan dan penugasan teknisi.',button('Buat work order',{primary:true,icon:'plus',message:'Form work order baru siap dibuka.'})) + `<div class="toolbar">${search('Cari nomor, pelanggan, atau lokasi...','work-search')}<button class="select-like" data-action="toast" data-message="Filter status dibuka.">${actionIcon('filter')}Semua status</button><button class="select-like" data-action="toast" data-message="Pemilih tanggal dibuka.">${actionIcon('calendar')}22–28 Jul 2024</button>${button('Export',{icon:'download',message:'Export work orders dibuat.'})}</div><article class="surface panel table-wrap"><table class="data-table"><thead><tr><th>PEKERJAAN</th><th>PELANGGAN</th><th>TEKNISI</th><th>TANGGAL</th><th>STATUS</th><th>LAPORAN</th><th></th></tr></thead><tbody id="work-order-rows">${workOrders.map((x,i)=>`<tr data-search="${x.join(' ').toLowerCase()}"><td><div class="cell-title">${x[0]}</div><div class="cell-meta">${x[1]}</div></td><td class="cell-muted">${x[2]}</td><td class="cell-muted">${x[3]}</td><td class="cell-muted">${x[4]}</td><td>${badge(x[5],x[5])}</td><td>${badge(x[6],x[6])}</td><td><button class="row-actions" data-route-target="work-order-detail" aria-label="Buka detail">${actionIcon('arrow')}</button></td></tr>`).join('')}</tbody></table></article>`;
+    }
+
+    function workOrderDetailScreen() {
+      return pageHeading('Servis AC Split 2 PK','WO-240318-017 · Detail pekerjaan',badge('Dikerjakan','Dikerjakan') + button('Tandai selesai',{primary:true,icon:'check',message:'Status pekerjaan diperbarui menjadi selesai.'})) + `<article class="surface panel detail-summary"><div><div class="label">PELANGGAN</div><div class="field-value">PT Arunika</div></div><div><div class="label">LOKASI</div><div class="field-value">Gedung Arunika, Lt. 5</div></div><div><div class="label">TEKNISI</div><div class="field-value">Dina Kartika</div></div><div><div class="label">JADWAL</div><div class="field-value">22 Jul 2024 · 09:00</div></div><div><div class="label">DIBUAT</div><div class="field-value">18 Jul 2024</div></div><div class="field-desc">Servis rutin AC split 2 PK — unit tidak dingin dan mengeluarkan suara berisik.</div></article><div class="detail-grid"><article class="surface panel">${panelHead('Aktivitas pekerjaan','Jejak pekerjaan dan dokumentasi')}<div class="timeline-list">${[['Work order dibuat','18 Jul · Rafi Pratama','blue'],['Teknisi ditugaskan','18 Jul · Dina Kartika','blue'],['Pekerjaan dimulai','22 Jul · 09:12','yellow'],['Dokumentasi diterima','22 Jul · 11:40 · 3 file','green']].map(x=>`<div class="timeline-row"><span class="timeline-dot ${x[2]}"></span><div><div class="timeline-title">${x[0]}</div><div class="timeline-meta">${x[1]}</div></div></div>`).join('')}</div><div class="note"><div class="label">CATATAN TEKNISI</div><p>Unit indoor berdebu, filter sangat kotor. Tekanan refrigerant rendah. Menunggu konfirmasi spare part.</p></div></article><article class="surface panel">${panelHead('Penugasan','Orang dan status pekerjaan')}<div class="person"><span class="avatar">DK</span><div><div class="person-name">Dina Kartika</div><div class="person-role">Teknisi lapangan</div></div></div><div class="steps">${[['Dijadwalkan',true],['Dikerjakan',true],['Selesai',false]].map(x=>`<div class="step ${x[1]?'done':''}"><span class="step-dot"></span><span class="step-label">${x[0]}</span></div>`).join('')}</div><div class="attachment">${actionIcon('attachment')}<div><div class="attachment-main">Dokumentasi pekerjaan</div><div class="attachment-meta">3 file · 2 foto · 1 audio</div></div></div><div>${button('Buka dokumentasi',{icon:'arrow',message:'Panel dokumentasi dibuka.'})}</div></article></div>`;
+    }
+
+    function reportsScreen() {
+      const tabs = ['Semua laporan','Perlu review','Butuh informasi','Disetujui'];
+      return pageHeading('Reports','Tinjau, revisi, dan setujui laporan pekerjaan.',button('Buat laporan manual',{primary:true,icon:'plus',message:'Form laporan manual siap dibuka.'})) + `<div class="tabs">${tabs.map((x,i)=>`<button class="tab ${i===0?'active':''}" data-report-tab="${x}">${x}</button>`).join('')}</div><div class="toolbar">${search('Cari laporan atau nomor work order...','report-search')}<button class="select-like" data-action="toast" data-message="Filter status dibuka.">${actionIcon('filter')}Filter status</button>${button('Export',{icon:'download',message:'Export laporan dibuat.'})}</div><article class="surface panel table-wrap"><table class="data-table"><thead><tr><th>LAPORAN</th><th>WORK ORDER</th><th>TEKNISI</th><th>DIPERBARUI</th><th>STATUS</th><th></th></tr></thead><tbody id="report-rows">${reports.map((x,i)=>`<tr data-report-status="${x[5]}" data-search="${x.join(' ').toLowerCase()}"><td><div class="cell-title">${x[0]}</div><div class="cell-meta">${x[1]}</div></td><td class="cell-blue">${x[2]}</td><td class="cell-muted">${x[3]}</td><td class="cell-muted">${x[4]}</td><td>${badge(x[5],x[5])}</td><td><button class="row-actions" data-route-target="report-review" aria-label="Review laporan">${actionIcon('arrow')}</button></td></tr>`).join('')}</tbody></table></article>`;
+    }
+
+    function reportReviewScreen() {
+      return pageHeading('Review laporan','RPT-240318-017 · Servis AC Split 2 PK',badge('Perlu review','Perlu review') + button('Minta informasi',{icon:'message',message:'Permintaan informasi dikirim ke teknisi.'}) + button('Setujui laporan',{primary:true,icon:'check',action:'approve-report'})) + `<div class="review-layout"><article class="surface panel">${panelHead('Sumber dokumentasi','Input yang digunakan AI')}${badge('Pengirim terverifikasi','Aktif')}<div class="source-info"><div class="source-sender">Dina Kartika · Telegram</div><div class="source-meta">22 Jul 2024 · 11:40</div></div><div class="source-message">“AC lantai 5 sudah dibersihkan. Filter sangat kotor dan tekanan freon rendah. Foto menyusul.”</div><div class="label">MEDIA · 3 FILE</div><div class="photos"><div class="photo">Sebelum</div><div class="photo">Proses</div><div class="photo">Sesudah</div></div><div class="audio">${actionIcon('audio')}<div><div class="audio-name">voice-note-240722.m4a</div><div class="audio-duration">00:18</div></div><button class="row-actions" style="margin-left:auto" data-action="toast" data-message="Audio diputar.">${actionIcon('play')}</button></div><p class="source-meta">Semua field di draft memiliki sumber yang dapat ditelusuri.</p></article><article class="surface panel"><div class="draft-head"><div><div class="label" style="color:var(--blue)">DRAFT LAPORAN · AI GENERATED</div><div class="draft-title">Servis AC Split 2 PK</div><div class="draft-meta">RPT-240318-017 · Versi 1 · Diperbarui 2 menit lalu</div></div>${badge('Versi 1','Draf')}</div>${[['Ringkasan','Unit indoor telah dibersihkan dan filter diganti. Tekanan refrigerant terdeteksi rendah.'],['Temuan','Filter dalam kondisi sangat kotor. Terdapat indikasi tekanan refrigerant rendah.'],['Tindakan','Membersihkan unit indoor dan mengganti filter. Pemeriksaan refrigerant direkomendasikan.'],['Rekomendasi','Lakukan pengisian refrigerant setelah teknisi memverifikasi kebocoran pada sistem.']].map((x,i)=>`<section class="draft-section"><div style="display:flex;align-items:center;justify-content:space-between;gap:10px"><h3>${x[0]}</h3>${i===1||i===3?badge('Perlu verifikasi','Perlu review'):''}</div><p>${x[1]}</p></section>`).join('')}<div class="warning-box">${actionIcon('alert')}<div><strong>2 informasi perlu dikonfirmasi</strong><p>Nomor seri unit dan hasil pengukuran akhir belum tersedia.</p></div></div></article></div>`;
+    }
+
+    function inboxScreen() {
+      const msgs = [['Dina Kartika','AC lantai 5 sudah dibersihkan...','2 mnt','Perlu konfirmasi','Perlu'],['Budi Santoso','Foto hasil instalasi jaringan...','18 mnt','Draf dibuat','Draf'],['Dina Kartika','Voice note · 00:18','1 jam','Diproses','Proses'],['Rafi Pratama','Work order baru untuk PT Arunika','2 jam','Terhubung','Terhubung']];
+      return pageHeading('AI Inbox','Semua dokumentasi masuk dari kanal terintegrasi.',badge('AI processing normal','Aktif') + button('Proses ulang terpilih',{icon:'refresh',message:'Pemrosesan ulang dimulai.'})) + `<div class="inbox-layout"><article class="surface panel message-list">${panelHead('Pesan masuk','12 belum diproses')}${search('Cari pesan atau pengirim...','inbox-search')}<div class="message-items">${msgs.map((x,i)=>`<button class="message-item ${i===0?'selected':''}" data-inbox-item="${i}"><span class="avatar">${x[0].split(' ').map(y=>y[0]).join('')}</span><span class="message-preview"><span class="message-sender">${x[0]}</span><span class="message-snippet">${x[1]}</span>${badge(x[3],x[4])}</span><span class="message-time">${x[2]}</span></button>`).join('')}</div></article><article class="surface panel inbox-detail" id="inbox-detail"><div class="inbox-section"><div class="label">MESSAGE DETAIL</div><h2 class="inbox-sender-name">Dina Kartika</h2><div class="source-meta">Telegram · 22 Jul 2024 · 11:40</div><div class="message-bubble">“AC lantai 5 sudah dibersihkan. Filter sangat kotor dan tekanan freon rendah. Foto menyusul.”</div></div><div class="inbox-section"><div class="label">WORK ORDER TERKAIT</div><div class="linked">${actionIcon('link')}<div><div class="linked-title">Servis AC Split 2 PK</div><div class="linked-meta">WO-240318-017 · PT Arunika</div></div>${badge('Konfirmasi dibutuhkan','Perlu')}</div></div><div class="inbox-section"><div class="label">TINDAKAN</div><p class="inbox-desc">AI menemukan dua work order yang mungkin cocok. Pilih salah satu untuk melanjutkan pembuatan draf.</p><div class="inbox-actions">${button('Konfirmasi work order',{primary:true,icon:'check',message:'Work order dikonfirmasi.'})}${button('Buat manual',{icon:'file',message:'Draf manual dibuat.'})}</div></div><p class="source-meta inbox-audit-note">Pesan asli akan selalu disimpan untuk audit dan traceability.</p></article></div>`;
+    }
+
+    function techniciansScreen() {
+      const rows = [['Dina Kartika','dina@arunika.id','Aktif','2 pekerjaan','12 laporan'],['Budi Santoso','budi@nusadata.id','Aktif','1 pekerjaan','9 laporan'],['Rafi Pratama','rafi@bisalapor.id','Aktif','3 pekerjaan','18 laporan'],['Andi Wijaya','andi@meridian.id','Aktif','0 pekerjaan','7 laporan'],['Sari Ningsih','sari@arunika.id','Nonaktif','—','5 laporan']];
+      return pageHeading('Technicians','Kelola anggota tim lapangan dan penugasan mereka.',button('Undang teknisi',{primary:true,icon:'userplus',message:'Undangan teknisi dibuat.'})) + `<div class="toolbar">${search('Cari nama atau email...','technician-search')}<button class="select-like" data-action="toast" data-message="Filter teknisi dibuka.">${actionIcon('filter')}Semua status</button><span class="toolbar-meta" style="color:var(--muted);font-size:11px;margin-left:auto">6 teknisi aktif</span></div><article class="surface panel table-wrap"><table class="data-table"><thead><tr><th>TEKNISI</th><th>STATUS</th><th>PEKERJAAN AKTIF</th><th>LAPORAN</th><th></th></tr></thead><tbody>${rows.map((x,i)=>`<tr><td><div style="display:flex;align-items:center;gap:12px"><span class="avatar">${x[0].split(' ').map(y=>y[0]).join('')}</span><div><div class="cell-title">${x[0]}</div><div class="cell-meta">${x[1]}</div></div></div></td><td>${badge(x[2],x[2])}</td><td class="cell-muted">${x[3]}</td><td class="cell-muted">${x[4]}</td><td><button class="row-actions" data-action="toast" data-message="Menu teknisi dibuka.">${actionIcon('more')}</button></td></tr>`).join('')}</tbody></table></article>`;
+    }
+
+    function customersScreen() {
+      const rows = [['PT Arunika','Gedung Arunika','12 work orders','4 laporan aktif'],['CV Nusa Data','Kantor Pusat','8 work orders','2 laporan aktif'],['PT Sinar Jaya','Pabrik Cikarang','6 work orders','1 laporan aktif'],['PT Meridian','Gedung Meridian','5 work orders','0 laporan aktif']];
+      return pageHeading('Customers','Direktori pelanggan dan riwayat pekerjaan.',button('Tambah pelanggan',{primary:true,icon:'plus',message:'Form pelanggan baru siap dibuka.'})) + `<div class="toolbar">${search('Cari nama pelanggan...','customer-search')}<span class="toolbar-meta" style="color:var(--muted);font-size:11px;margin-left:auto">18 pelanggan</span></div><div class="customer-grid">${rows.map((x,i)=>`<article class="surface panel customer-card"><div class="customer-header"><span class="avatar customer-avatar">${x[0].replace(/^(PT|CV) /,'').slice(0,2).toUpperCase()}</span><div><h2>${x[0]}</h2><p class="panel-subtitle">${x[1]}</p></div><button class="row-actions" data-action="toast" data-message="Detail pelanggan dibuka." aria-label="Buka detail pelanggan">${actionIcon('arrow')}</button></div><div class="customer-divider"></div><div class="customer-stats"><div><div class="label">WORK ORDERS</div><div class="field-value">${x[2]}</div></div><div><div class="label">LAPORAN AKTIF</div><div class="field-value">${x[3]}</div></div></div></article>`).join('')}</div>`;
+    }
+
+    function settingsScreen() {
+      return pageHeading('Team & Access','Kelola anggota, role, dan akses workspace.',button('Undang anggota',{primary:true,icon:'userplus',message:'Undangan anggota dibuat.'})) + `<div class="settings-layout"><aside class="surface panel settings-nav">${[['building','Company Profile'],['users','Team & Access'],['link','Integrations'],['report','Security & Logs']].map((x,i)=>`<button class="settings-link ${i===1?'active':''}" data-action="toast" data-message="${x[1]} dipilih.">${actionIcon(x[0])}${x[1]}</button>`).join('')}<div class="settings-divider"></div><div class="settings-field"><div class="label">WORKSPACE ID</div><div class="value">arunika-prod</div></div><div class="settings-field"><div class="label">PLAN</div><div class="badge-wrap" style="margin-top:6px">${badge('Pilot','Aktif')}</div></div></aside><div class="settings-content"><article class="surface panel member-list">${panelHead('Anggota workspace','Peran menentukan data dan tindakan yang dapat diakses.')}<div class="member-row member-header"><span>NAMA</span><span>ROLE</span><span>STATUS</span><span></span></div>${[['Rafi Pratama','Owner','Aktif'],['Dina Kartika','Technician','Aktif'],['Budi Santoso','Technician','Aktif'],['Sari Ningsih','Supervisor','Nonaktif']].map((x,i)=>`<div class="member-row"><div class="member"><span class="avatar">${x[0].split(' ').map(y=>y[0]).join('')}</span><div><div class="member-name">${x[0]}</div><div class="member-email">${i===0?'rafi@bisalapor.id':x[0].split(' ')[0].toLowerCase()+'@arunika.id'}</div></div></div><span class="cell-muted">${x[1]}</span>${badge(x[2],x[2])}<button class="row-actions" data-action="toast" data-message="Menu anggota dibuka.">${actionIcon('more')}</button></div>`).join('')}</article><article class="surface panel integration">${panelHead('Integrasi aktif','Kanal yang dapat menerima dokumentasi teknisi.')}<div class="integration-row"><span class="avatar" style="border-radius:12px">${actionIcon('send')}</span><div><div class="integration-title">Telegram Bot</div><div class="integration-meta">@arunika_lapor_bot · Webhook verified</div></div><div class="badge-wrap" style="margin-left:auto">${badge('Aktif','Aktif')}</div></div><div class="integration-actions">${button('Kelola integrasi',{icon:'settings',message:'Pengaturan integrasi dibuka.'})}</div><p class="panel-subtitle integration-desc">AI hanya memproses pesan yang masuk melalui kanal terintegrasi.</p></article></div></div>`;
+    }
+
+    const screens = { overview: overviewScreen, 'work-orders': workOrdersScreen, 'work-order-detail': workOrderDetailScreen, reports: reportsScreen, 'report-review': reportReviewScreen, inbox: inboxScreen, technicians: techniciansScreen, customers: customersScreen, settings: settingsScreen };
+    const labels = { overview:'Overview', 'work-orders':'Work Orders', 'work-order-detail':'Work Orders / Detail', reports:'Reports', 'report-review':'Reports / Review', inbox:'AI Inbox', technicians:'Technicians', customers:'Customers', settings:'Settings / Team & Access' };
+    let currentRoute = 'overview';
+    let toastTimer;
+    function showToast(message) { const el = document.getElementById('toast'); el.textContent = message; el.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('show'), 2600); }
+    function route(route) {
+      currentRoute = route;
+      if (location.hash.replace(/^#/, '') !== route) location.hash = route;
+      /* Screen HTML comes only from fixed local templates; no user-provided values are interpolated. */
+      document.getElementById('screen-root').innerHTML = screens[route]();
+      const activeRoute = route === 'work-order-detail' ? 'work-orders' : route === 'report-review' ? 'reports' : route;
+      document.querySelectorAll('#main-nav button').forEach(b => {
+        const isActive = b.dataset.route === activeRoute;
+        b.classList.toggle('active', isActive);
+        if (isActive) b.setAttribute('aria-current', 'page');
+        else b.removeAttribute('aria-current');
+      });
+      bindEvents();
+    }
+    function bindEvents() {
+      document.querySelectorAll('[data-route-target]').forEach(el => el.addEventListener('click', () => route(el.dataset.routeTarget)));
+      document.querySelectorAll('[data-action="toast"]').forEach(el => el.addEventListener('click', () => showToast(el.dataset.message || 'Aksi berhasil.')));
+      document.querySelectorAll('[data-action="approve-report"]').forEach(el => el.addEventListener('click', () => { showToast('Laporan disetujui dan versi final dicatat.'); setTimeout(() => route('reports'), 450); }));
+      document.querySelectorAll('[data-report-tab]').forEach(el => el.addEventListener('click', () => { document.querySelectorAll('[data-report-tab]').forEach(x => x.classList.remove('active')); el.classList.add('active'); const val = el.dataset.reportTab; document.querySelectorAll('#report-rows tr').forEach(row => row.style.display = val === 'Semua laporan' || row.dataset.reportStatus.toLowerCase().includes(val.replace('Perlu ','').replace('Butuh ','' ).toLowerCase()) ? '' : 'none'); }));
+      document.querySelectorAll('input[type="search"]').forEach(input => input.addEventListener('input', () => { const query = input.value.toLowerCase(); const root = input.id === 'work-search' ? '#work-order-rows tr' : input.id === 'report-search' ? '#report-rows tr' : null; if (root) document.querySelectorAll(root).forEach(row => row.style.display = row.dataset.search.includes(query) ? '' : 'none'); }));
+      document.querySelectorAll('[data-inbox-item]').forEach(el => el.addEventListener('click', () => { document.querySelectorAll('[data-inbox-item]').forEach(x => x.classList.remove('selected')); el.classList.add('selected'); showToast('Pesan dipilih. Detail sumber diperbarui.'); }));
+    }
+    document.querySelectorAll('#main-nav button').forEach(el => el.addEventListener('click', () => route(el.dataset.route)));
+    const initialHash = location.hash.replace(/^#/, '');
+    route(screens[initialHash] ? initialHash : 'overview');
+    window.addEventListener('hashchange', () => {
+      const r = location.hash.replace(/^#/, '');
+      if (screens[r] && r !== currentRoute) route(r);
+    });
+  </script>
+</body>
+</html>

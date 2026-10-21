@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pembagian Tugas Frontend (FE) — BisaLapor (Pure Frontend Focus)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    @page {
+      size: A4 portrait;
+      margin: 14mm 16mm 14mm 16mm;
+      @bottom-right {
+        content: counter(page) " / " counter(pages);
+        font-family: 'Inter', sans-serif;
+        font-size: 8.5pt;
+        color: #64748B;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #0F172A;
+      background: #FFFFFF;
+      margin: 0;
+      padding: 0;
+      font-size: 9.5pt;
+      line-height: 1.45;
+    }
+
+    /* Header / Cover Banner */
+    .doc-header {
+      border-bottom: 2.5px solid #0F1E55;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-box {
+      width: 42px;
+      height: 42px;
+      background: #0F1E55;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    .brand-text h1 {
+      font-size: 16pt;
+      font-weight: 800;
+      color: #0F1E55;
+      margin: 0;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-text p {
+      font-size: 8.5pt;
+      color: #64748B;
+      margin: 2px 0 0;
+      font-weight: 500;
+    }
+
+    .meta-badge {
+      text-align: right;
+      font-size: 8pt;
+      color: #475569;
+    }
+
+    .meta-badge strong {
+      color: #0F1E55;
+      display: block;
+      font-size: 9.5pt;
+    }
+
+    /* Section Headings */
+    h2 {
+      font-size: 11.5pt;
+      font-weight: 700;
+      color: #0F1E55;
+      margin: 16px 0 8px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #E2E8F0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    h2 .num {
+      background: #0F1E55;
+      color: #FFFFFF;
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8.5pt;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0 0 8px;
+      color: #334155;
+    }
+
+    /* Summary Matrix Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 14px;
+      font-size: 8pt;
+    }
+
+    th {
+      background: #0F1E55;
+      color: #FFFFFF;
+      text-align: left;
+      padding: 7px 9px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    th:first-child { border-top-left-radius: 6px; }
+    th:last-child { border-top-right-radius: 6px; }
+
+    td {
+      padding: 6.5px 9px;
+      border-bottom: 1px solid #E2E8F0;
+      color: #334155;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td {
+      background: #F8FAFC;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 7pt;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .badge-primary { background: #EEF2FF; color: #3730A3; border: 1px solid #C7D2FE; }
+    .badge-success { background: #ECFDF5; color: #065F46; border: 1px solid #A7F3D0; }
+    .badge-amber { background: #FFFBEB; color: #92400E; border: 1px solid #FDE68A; }
+    .badge-blue { background: #EFF6FF; color: #1E40AF; border: 1px solid #BFDBFE; }
+
+    /* Developer Cards */
+    .dev-card {
+      border: 1px solid #CBD5E1;
+      border-radius: 7px;
+      padding: 9px 12px;
+      margin-bottom: 10px;
+      background: #FFFFFF;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .dev-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #F1F5F9;
+      padding-bottom: 6px;
+      margin-bottom: 6px;
+    }
+
+    .dev-title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #0F1E55;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .dev-tag {
+      font-size: 7.5pt;
+      background: #F1F5F9;
+      color: #475569;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .task-list {
+      margin: 0;
+      padding-left: 16px;
+      font-size: 8pt;
+      color: #334155;
+    }
+
+    .task-list li {
+      margin-bottom: 3px;
+    }
+
+    .deliverables {
+      margin-top: 6px;
+      background: #F8FAFC;
+      border-left: 3px solid #0F1E55;
+      padding: 5px 8px;
+      font-size: 7.5pt;
+      color: #475569;
+    }
+
+    .deliverables strong {
+      color: #0F1E55;
+    }
+
+    /* Sprint Timeline Box */
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 9px;
+      margin: 10px 0;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .timeline-phase {
+      border: 1px solid #E2E8F0;
+      border-radius: 6px;
+      padding: 8px 10px;
+      background: #F8FAFC;
+    }
+
+    .timeline-phase h4 {
+      margin: 0 0 3px;
+      font-size: 8.5pt;
+      color: #0F1E55;
+      font-weight: 700;
+    }
+
+    .timeline-phase .days {
+      font-size: 7pt;
+      color: #64748B;
+      margin-bottom: 5px;
+      display: block;
+      font-weight: 600;
+    }
+
+    .timeline-phase ul {
+      margin: 0;
+      padding-left: 13px;
+      font-size: 7.5pt;
+      color: #334155;
+    }
+
+    .timeline-phase li {
+      margin-bottom: 2px;
+    }
+
+    /* Callout & Footer */
+    .callout {
+      background: #EFF6FF;
+      border-left: 3.5px solid #2563EB;
+      padding: 8px 10px;
+      border-radius: 4px;
+      font-size: 8pt;
+      color: #1E3A8A;
+      margin: 10px 0;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .page-break {
+      page-break-after: always;
+      break-after: always;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= PAGE 1 ================= -->
+  <header class="doc-header">
+    <div class="brand-group">
+      <div class="logo-box">B</div>
+      <div class="brand-text">
+        <h1>BisaLapor — Distribusi Tim Frontend (100% FE Scope)</h1>
+        <p>Struktur Pengerjaan UI/UX, Mock Data & Interaksi 5 Developer FE (Tanpa Backend Dependency)</p>
+      </div>
+    </div>
+    <div class="meta-badge">
+      <strong>Dokumen Kerja Khusus Frontend</strong>
+      Fase 1: Standalone FE Prototype<br>
+      Data Layer: Mock Data & Local State
+    </div>
+  </header>
+
+  <h2><span class="num">1</span> Fokus Khusus Frontend & Prinsip Mock Architecture</h2>
+  <p>
+    Sesuai arahan proyek saat ini, <strong>fokus pengerjaan adalah 100% pada Frontend (UI, UX, Interaktivitas, dan Responsivitas)</strong> tanpa mengintegrasikan backend atau database terlebih dahulu. Strategi ini memungkinkan tim bergerak cepat menghasilkan produk frontend yang siap pakai dan dapat didemokan secara mandiri.
+  </p>
+  <ul style="font-size: 8.5pt; color: #334155; margin-top: 2px; margin-bottom: 12px; padding-left: 16px;">
+    <li><strong>Mock Data Architecture:</strong> Seluruh data pekerjaan (Work Orders), laporan, draf AI, dan pesan inbox disuplai melalui file TypeScript/JSON mock lokal (misal: <code>src/mocks/workOrders.json</code>).</li>
+    <li><strong>Client-Side State Management:</strong> Operasi filter, pencarian (search debounce), penambahan WO, dan pergantian status (misal: tombol <em>Approve Report</em>) ditangani langsung di state aplikasi (React State / Zustand / Context).</li>
+    <li><strong>Kemandirian Modul:</strong> Tidak ada developer yang tertunda oleh pembuatan API backend, migrasi database, atau setup server eksternal.</li>
+  </ul>
+
+  <h2><span class="num">2</span> Matriks Pembagian Tugas 5 Developer FE</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 14%;">Developer</th>
+        <th style="width: 26%;">Domain / Modul FE</th>
+        <th style="width: 25%;">Halaman Terkait</th>
+        <th style="width: 35%;">Deliverables Utama (Pure Frontend)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Dev 1 (Lead FE)</strong></td>
+        <td><span class="badge badge-primary">Foundation & Shell</span><br>Design System & Overview</td>
+        <td>
+          • <code>01_Overview</code><br>
+          • Global App Shell
+        </td>
+        <td>Setup token CSS Apple Navy (<code>#0F1E55</code>), UI Kit (Button, Badge, Table, Input, Modal, Toast), Sidebar ikon rail, Topbar utility, dan KPI Metric Cards interaktif.</td>
+      </tr>
+      <tr>
+        <td><strong>Dev 2</strong></td>
+        <td><span class="badge badge-blue">Operasional WO</span><br>Work Orders UI & Views</td>
+        <td>
+          • <code>02_Work_Orders</code><br>
+          • <code>03_Work_Order_Detail</code>
+        </td>
+        <td>Tabel daftar WO desktop + auto Card View mobile, client-side search & filter, detail WO, stepper progres pekerjaan 3 tahap, dan modal tambah WO.</td>
+      </tr>
+      <tr>
+        <td><strong>Dev 3</strong></td>
+        <td><span class="badge badge-amber">Core Reporting</span><br>AI Draft & Verification</td>
+        <td>
+          • <code>04_Reports</code><br>
+          • <code>05_Report_Review</code>
+        </td>
+        <td>Filter tabs status laporan, split-view verifikasi (bukti lapangan vs draf AI yang dapat diedit), penanganan missing-info alert, flow tombol Approve (state lock).</td>
+      </tr>
+      <tr>
+        <td><strong>Dev 4</strong></td>
+        <td><span class="badge badge-success">AI & Media</span><br>AI Inbox & Viewer</td>
+        <td>
+          • <code>06_AI_Inbox</code><br>
+          • Media Player & Lightbox
+        </td>
+        <td>Master-Detail inbox pesan (simulasi feed Telegram/WA), kartu resolusi WO ambigu, inline Audio Player voice-note teknisi, dan Image Lightbox preview foto.</td>
+      </tr>
+      <tr>
+        <td><strong>Dev 5</strong></td>
+        <td><span class="badge badge-primary">Management</span><br>Directory & Settings</td>
+        <td>
+          • <code>07_Technicians</code><br>
+          • <code>08_Customers</code><br>
+          • <code>09_Settings</code>
+        </td>
+        <td>Tabel/card teknisi (toggle status aktif/nonaktif di state), card grid pelanggan, antarmuka tim & toggle role (RBAC mockup), status visual koneksi bot.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout" style="margin-top: 12px;">
+    <strong>Acuan Visual & Interaksi:</strong> Seluruh developer mengacu pada prototype interaktif di <code>ui/bisalapor-ui.html</code> dan paket ekspor vektor di folder <code>figma-export/</code> untuk memastikan keseragaman visual 100%.
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ================= PAGE 2 ================= -->
+  <h2><span class="num">3</span> Rincian Spesifikasi & Deliverables Frontend (Bagian 1)</h2>
+
+  <!-- DEV 1 -->
+  <div class="dev-card">
+    <div class="dev-header">
+      <div class="dev-title">
+        <span>👤 Dev 1: Lead Frontend — Foundation, App Shell & Overview</span>
+      </div>
+      <span class="dev-tag">Prioritas P0 · Core Foundation</span>
+    </div>
+    <ul class="task-list">
+      <li><strong>Design System Setup:</strong> Definisikan token CSS: Apple Navy (<code>#0F1E55</code>, <code>#14245F</code>), Glassmorphism surfaces (blur 14–18px, shadow lembut), dan tipografi Inter.</li>
+      <li><strong>UI Component Library:</strong> Bangun komponen reusable: <code>Button</code> (primary/secondary/danger), <code>Badge</code> (status dot), <code>SearchInput</code>, <code>Dropdown</code>, <code>ModalDialog</code>, dan <code>ToastFeedback</code>.</li>
+      <li><strong>Persistent App Shell:</strong> Buat Sidebar navigasi ikon (64×64 px item, active state dinamis, tooltip samping kanan) dan Topbar (tombol notifikasi + tanggal 'Hari Ini' + CTA).</li>
+      <li><strong>Halaman 01_Overview:</strong> 4 Metric KPI Cards (Pekerjaan aktif, Menunggu review, Butuh info, Disetujui), Bar Chart distribusi status pekerjaan (Open, Assigned, In Progress, Completed), widget antrean review, dan AI Health status bar (96.4% success).</li>
+    </ul>
+    <div class="deliverables">
+      <strong>Deliverables (FE):</strong> <code>src/components/ui/*</code>, <code>src/layouts/AppShell.tsx</code>, <code>src/pages/Overview.tsx</code>, <code>src/mocks/metrics.json</code>.
+    </div>
+  </div>
+
+  <!-- DEV 2 -->
+  <div class="dev-card">
+    <div class="dev-header">
+      <div class="dev-title">
+        <span>👤 Dev 2: Work Orders Management (Client-Side Operasional)</span>
+      </div>
+      <span class="dev-tag">Prioritas P0 · Interactive Tables</span>
+    </div>
+    <ul class="task-list">
+      <li><strong>Halaman 02_Work_Orders:</strong> Toolbar responsif (Search bar full-width, filter status, filter rentang tanggal, tombol Export simulasi toast).</li>
+      <li><strong>Responsive Table / Card:</strong> Tampilan tabel multi-kolom di desktop; otomatis berubah menjadi *stacked card view* di mobile (&lt;760px) tanpa clipping kolom.</li>
+      <li><strong>Halaman 03_Work_Order_Detail:</strong> Header ringkasan pekerjaan, stepper progres 3 tahap (Dijadwalkan → Dikerjakan → Selesai), jejak aktivitas pekerjaan vertikal (timeline), dan panel informasi teknisi yang ditugaskan.</li>
+      <li><strong>Client-Side Action:</strong> Modal form "Buat Work Order Baru" yang langsung memasukkan data baru ke list mock state lokal sehingga UI langsung ter-update secara reaktif.</li>
+    </ul>
+    <div class="deliverables">
+      <strong>Deliverables (FE):</strong> <code>src/pages/work-orders/*</code>, <code>WorkOrderTable.tsx</code>, <code>WorkOrderCard.tsx</code>, <code>src/mocks/workOrders.ts</code>.
+    </div>
+  </div>
+
+  <!-- DEV 3 -->
+  <div class="dev-card">
+    <div class="dev-header">
+      <div class="dev-title">
+        <span>👤 Dev 3: Reports & Human Approval (Core Value Engine)</span>
+      </div>
+      <span class="dev-tag">Prioritas P0 · AI Review Layout</span>
+    </div>
+    <ul class="task-list">
+      <li><strong>Halaman 04_Reports:</strong> Filter tabs status (Semua, Perlu review, Butuh info, Disetujui), pencarian laporan client-side, dan tabel daftar laporan dengan ID unik (<code>RPT-...</code>).</li>
+      <li><strong>Halaman 05_Report_Review (Split View):</strong>
+        <ul style="margin: 2px 0; padding-left: 14px;">
+          <li><em>Panel Kiri (Bukti Lapangan):</em> Teks chat asli teknisi, galeri foto dokumentasi (Sebelum, Proses, Sesudah), dan widget pemutar suara voice-note (durasi, progress play).</li>
+          <li><em>Panel Kanan (Draf AI):</em> Form terstruktur (Ringkasan, Temuan, Tindakan, Rekomendasi) yang dapat diedit oleh supervisor/admin.</li>
+        </ul>
+      </li>
+      <li><strong>AI Missing Information Alert:</strong> Kotak peringatan visual jika ada data yang belum lengkap dari lapangan (mencegah halusinasi AI sesuai PRD Pasal 14).</li>
+      <li><strong>Approval Flow Mock:</strong> Tombol *Setujui Laporan* mengunci input form, mengubah status menjadi "Disetujui", dan memicu simulasi download laporan PDF.</li>
+    </ul>
+    <div class="deliverables">
+      <strong>Deliverables (FE):</strong> <code>src/pages/reports/*</code>, <code>ReportList.tsx</code>, <code>ReportReviewSplitView.tsx</code>, <code>src/mocks/reports.ts</code>.
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ================= PAGE 3 ================= -->
+  <h2><span class="num">3</span> Rincian Spesifikasi & Deliverables Frontend (Bagian 2)</h2>
+
+  <!-- DEV 4 -->
+  <div class="dev-card">
+    <div class="dev-header">
+      <div class="dev-title">
+        <span>👤 Dev 4: AI Inbox & Media Processing Pipeline</span>
+      </div>
+      <span class="dev-tag">Prioritas P0 · Messaging UI</span>
+    </div>
+    <ul class="task-list">
+      <li><strong>Halaman 06_AI_Inbox (Master-Detail):</strong> List pesan masuk di sisi kiri dengan indikator badge status (Diproses, Draf dibuat, Perlu konfirmasi, Gagal) dan preview chat.</li>
+      <li><strong>Detail Pesan Lapangan:</strong> Bubble pesan asli teknisi dengan metadata kanal (Telegram/WhatsApp icon, pengirim terverifikasi, tanggal dan jam).</li>
+      <li><strong>Resolusi Work Order Ambigu:</strong> Tampilkan kartu pencocokan work order otomatis dari AI saat pesan masuk tidak memiliki nomor referensi pasti, dengan tombol aksi interaktif *Konfirmasi WO* atau *Buat Manual*.</li>
+      <li><strong>Media Components:</strong> Custom Audio Player untuk pesan suara teknisi (play/pause/seek dengan HTML5 Audio) dan Image Lightbox modal untuk zoom foto bukti servis.</li>
+    </ul>
+    <div class="deliverables">
+      <strong>Deliverables (FE):</strong> <code>src/pages/inbox/*</code>, <code>InboxList.tsx</code>, <code>AudioPlayer.tsx</code>, <code>src/mocks/inboxMessages.ts</code>.
+    </div>
+  </div>
+
+  <!-- DEV 5 -->
+  <div class="dev-card">
+    <div class="dev-header">
+      <div class="dev-title">
+        <span>👤 Dev 5: Directory, Technicians & Team Settings (RBAC)</span>
+      </div>
+      <span class="dev-tag">Prioritas P0 & P1 · Management UI</span>
+    </div>
+    <ul class="task-list">
+      <li><strong>Halaman 07_Technicians:</strong> Daftar akun teknisi lapangan (nama, email, status aktif/nonaktif, jumlah penugasan pekerjaan aktif, dan riwayat laporan). Modal undang/tambah akun teknisi (menambah ke local state).</li>
+      <li><strong>Halaman 08_Customers:</strong> Card grid direktori pelanggan (nama perusahaan PT/CV, lokasi unit, counter total work order aktif dan selesai).</li>
+      <li><strong>Halaman 09_Settings (Team & Access):</strong> Navigasi internal pengaturan (Company Profile, Team & Access, Integrations, Security & Logs). Tabel anggota tim beserta dropdown role mock (Owner, Admin, Supervisor, Technician).</li>
+      <li><strong>Status Integrasi Webhook:</strong> Card status koneksi bot Telegram / WhatsApp dengan indikator visual *Webhook Verified*.</li>
+    </ul>
+    <div class="deliverables">
+      <strong>Deliverables (FE):</strong> <code>src/pages/technicians/*</code>, <code>src/pages/customers/*</code>, <code>src/pages/settings/*</code>, <code>src/mocks/users.ts</code>.
+    </div>
+  </div>
+
+  <!-- SECTION 4 -->
+  <h2><span class="num">4</span> Rencana Eksekusi Sprint Frontend (Timeline 10 Hari Kerja)</h2>
+  <div class="timeline-grid">
+    <div class="timeline-phase">
+      <h4>Fase 1: Foundation</h4>
+      <span class="days">Hari 1 – 3</span>
+      <ul>
+        <li>Dev 1 setup boilerplate, Tailwind/CSS tokens, dan Layout App Shell.</li>
+        <li>Dev 2–5 mendefinisikan TypeScript interfaces dan Mock Data JSON lokal.</li>
+        <li>Testing struktur routing navigasi client-side.</li>
+      </ul>
+    </div>
+    <div class="timeline-phase">
+      <h4>Fase 2: UI & Interaksi</h4>
+      <span class="days">Hari 4 – 8</span>
+      <ul>
+        <li>Pengerjaan komponen halaman di branch masing-masing.</li>
+        <li>Dev 2 & 3 menyelesaikan alur WO dan Report Review.</li>
+        <li>Dev 4 membuat audio player & inbox simulator.</li>
+        <li>Dev 5 membangun direktori teknisi & settings.</li>
+      </ul>
+    </div>
+    <div class="timeline-phase">
+      <h4>Fase 3: Polish & QA</h4>
+      <span class="days">Hari 9 – 10</span>
+      <ul>
+        <li>Penggabungan branch (PR Review) dan cross-navigation link.</li>
+        <li>Uji responsif pada mobile (360px – 768px).</li>
+        <li>Testing transisi state (Loading, Empty, Error, Success).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 5 -->
+  <h2><span class="num">5</span> Standar Kualitas Frontend (Definition of Done)</h2>
+  <table style="margin-top: 6px;">
+    <thead>
+      <tr>
+        <th style="width: 25%;">Area Kualitas</th>
+        <th style="width: 75%;">Standar yang Wajib Dipenuhi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Responsivitas</strong></td>
+        <td>Semua halaman wajib tampil sempurna dari viewport smartphone (360px), tablet (768px), hingga desktop (1440px). Tabel di mobile otomatis beralih ke Card View.</td>
+      </tr>
+      <tr>
+        <td><strong>State Handling</strong></td>
+        <td>Setiap modul wajib menangani 5 kondisi UI: <em>Loading</em> (skeleton), <em>Empty state</em> (data kosong), <em>Error state</em> (gagal fetch), <em>Permission denied</em>, dan <em>Success feedback</em> (Toast).</td>
+      </tr>
+      <tr>
+        <td><strong>Data Layer</strong></td>
+        <td>100% menggunakan Mock Data Typescript/JSON lokal. Tidak boleh ada dependency ke server backend eksternal yang belum siap.</td>
+      </tr>
+      <tr>
+        <td><strong>Git Branching</strong></td>
+        <td>Format branch: <code>feat/&lt;dev-name&gt;-&lt;modul&gt;</code> (misal: <code>feat/dev2-work-orders</code>). Wajib lolos linter & typecheck sebelum pull request.</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

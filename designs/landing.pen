@@ -1,0 +1,3217 @@
+{
+  "version": "2.21",
+  "children": [
+    {
+      "type": "frame",
+      "id": "uO48Y",
+      "x": 80,
+      "y": 80,
+      "name": "BisaLapor Landing Page",
+      "clip": true,
+      "width": 1440,
+      "fill": "$bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "BAmy7",
+          "name": "Sticky Navigation",
+          "width": "fill_container",
+          "height": 76,
+          "fill": "$bg",
+          "stroke": "$line",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "padding": [
+            0,
+            96
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Y0WCrs",
+              "name": "BisaLapor Brand",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "RXyPG",
+                  "name": "BisaLapor Lettermark",
+                  "width": 25,
+                  "height": 25,
+                  "fill": "$navy",
+                  "cornerRadius": 8,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "o8tZAr",
+                      "x": 6,
+                      "y": 1,
+                      "name": "Letter B",
+                      "fill": "#FFFFFF",
+                      "content": "B",
+                      "fontFamily": "$display",
+                      "fontSize": 20,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "AAN0g",
+                  "name": "BisaLapor Wordmark",
+                  "fill": "$navy",
+                  "content": "BisaLapor",
+                  "fontFamily": "$display",
+                  "fontSize": 17,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.4
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "DIQjS",
+              "name": "Navigation Links",
+              "gap": 28,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Oau0u",
+                  "name": "Nav Produk",
+                  "fill": "$muted",
+                  "content": "Produk",
+                  "fontFamily": "$body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "MVLZm",
+                  "name": "Nav Cara Kerja",
+                  "fill": "$muted",
+                  "content": "Cara Kerja",
+                  "fontFamily": "$body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "ZARrE",
+                  "name": "Nav Use Case",
+                  "fill": "$muted",
+                  "content": "Use Case",
+                  "fontFamily": "$body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "G6hskO",
+                  "name": "Masuk",
+                  "fill": "$navy",
+                  "content": "Masuk",
+                  "fontFamily": "$body",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "KBAPL",
+                  "name": "Mulai Gratis Button",
+                  "fill": "$navy",
+                  "cornerRadius": 8,
+                  "padding": [
+                    10,
+                    16
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "T9zXO",
+                      "name": "Mulai Gratis Label",
+                      "fill": "#FFFFFF",
+                      "content": "Mulai Gratis",
+                      "fontFamily": "$body",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xQZXe",
+          "name": "Hero",
+          "width": "fill_container",
+          "stroke": "$line",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "gap": 72,
+          "padding": [
+            94,
+            96,
+            104,
+            96
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "c6O7N",
+              "name": "Hero Copy",
+              "width": 520,
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "YzRvV",
+                  "name": "Hero Eyebrow",
+                  "fill": "$blue",
+                  "content": "OPERASIONAL LAPANGAN YANG TERDOKUMENTASI",
+                  "fontFamily": "$body",
+                  "fontSize": 12,
+                  "fontWeight": "700",
+                  "letterSpacing": 1.2
+                },
+                {
+                  "type": "text",
+                  "id": "M5ysM",
+                  "name": "Hero Headline",
+                  "fill": "$navy",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Kerja lapangan rapi. Dokumentasi selesai.",
+                  "lineHeight": 1.06,
+                  "fontFamily": "$display",
+                  "fontSize": 54,
+                  "fontWeight": "700",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "k9Bcd",
+                  "name": "Hero Description",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Ubah catatan lapangan, foto, dan pembaruan teknisi menjadi laporan kerja yang rapi—tanpa pekerjaan administrasi yang berulang.",
+                  "lineHeight": 1.55,
+                  "fontFamily": "$body",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "sESRT",
+                  "name": "Hero Actions",
+                  "gap": 14,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "W7M6w",
+                      "name": "Hero Primary CTA",
+                      "fill": "$navy",
+                      "cornerRadius": 8,
+                      "padding": [
+                        13,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "xVZc1",
+                          "name": "Hero Primary CTA Label",
+                          "fill": "#FFFFFF",
+                          "content": "Mulai Gratis",
+                          "fontFamily": "$body",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Avb4x",
+                      "name": "Hero Secondary CTA",
+                      "padding": [
+                        12,
+                        4
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "m5ropV",
+                          "name": "Hero Secondary CTA Label",
+                          "fill": "$navy",
+                          "content": "Lihat Cara Kerjanya  →",
+                          "fontFamily": "$body",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "BonAW",
+              "name": "Hero Product Preview",
+              "width": 656,
+              "height": 432,
+              "fill": "$surface",
+              "cornerRadius": 8,
+              "stroke": "$line",
+              "strokeWidth": 1,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#1D1D1F12",
+                "offset": {
+                  "x": 0,
+                  "y": 12
+                },
+                "blur": 30
+              },
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "e30UnB",
+                  "name": "Application Topbar",
+                  "width": "fill_container",
+                  "height": 52,
+                  "fill": "$subtle",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "padding": [
+                    0,
+                    18
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dNrF2",
+                      "name": "Application Breadcrumb",
+                      "fill": "$muted",
+                      "content": "Pekerjaan  /  WO-240318-017",
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "L7dNdg",
+                      "name": "Job Status",
+                      "fill": "#ECFDF5",
+                      "cornerRadius": 8,
+                      "padding": [
+                        5,
+                        9
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "IQiyh",
+                          "name": "Job Status Label",
+                          "fill": "$success",
+                          "content": "Selesai",
+                          "fontFamily": "$body",
+                          "fontSize": 11,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "rR0vD",
+                  "name": "Application Content",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "nyLei",
+                      "name": "Work Order Panel",
+                      "width": 360,
+                      "stroke": "$line",
+                      "strokeWidth": {
+                        "right": 1
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "N32tb",
+                          "name": "Work Order Title",
+                          "fill": "$navy",
+                          "content": "Servis AC Split 2 PK",
+                          "fontFamily": "$display",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "M3OyJN",
+                          "name": "Work Order Client",
+                          "fill": "$muted",
+                          "content": "PT Sinar Pangan • Jakarta Selatan",
+                          "fontFamily": "$body",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "J3vEN",
+                          "name": "Technician Notes",
+                          "fill": "$subtle",
+                          "cornerRadius": 8,
+                          "layout": "vertical",
+                          "gap": 7,
+                          "padding": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "WNfbM",
+                              "name": "Notes Label",
+                              "fill": "$muted",
+                              "content": "CATATAN TEKNISI",
+                              "fontFamily": "$body",
+                              "fontSize": 10,
+                              "fontWeight": "700",
+                              "letterSpacing": 0.8
+                            },
+                            {
+                              "type": "text",
+                              "id": "n9WVk",
+                              "name": "Notes Content",
+                              "fill": "$ink",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Evaporator dibersihkan, tekanan refrigeran normal. Drainase lancar setelah pembersihan.",
+                              "lineHeight": 1.45,
+                              "fontFamily": "$body",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "P8me7",
+                          "name": "Documentation Label",
+                          "fill": "$muted",
+                          "content": "DOKUMENTASI • 3 FOTO",
+                          "fontFamily": "$body",
+                          "fontSize": 10,
+                          "fontWeight": "700",
+                          "letterSpacing": 0.8
+                        },
+                        {
+                          "type": "frame",
+                          "id": "kvMtZ",
+                          "name": "Photo Documentation",
+                          "width": "fill_container",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "YcpoZ",
+                              "name": "Photo 01",
+                              "width": 96,
+                              "height": 62,
+                              "fill": "#CBD5E1",
+                              "cornerRadius": 3,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "YDkGT",
+                                  "x": 8,
+                                  "y": 38,
+                                  "name": "Photo 01 Label",
+                                  "fill": "#FFFFFF",
+                                  "content": "AC 01",
+                                  "fontFamily": "$body",
+                                  "fontSize": 10,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "U0vvC",
+                              "name": "Photo 02",
+                              "width": 96,
+                              "height": 62,
+                              "fill": "#94A3B8",
+                              "cornerRadius": 3,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "UqTdR",
+                                  "x": 8,
+                                  "y": 38,
+                                  "name": "Photo 02 Label",
+                                  "fill": "#FFFFFF",
+                                  "content": "AC 02",
+                                  "fontFamily": "$body",
+                                  "fontSize": 10,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "y0ay9J",
+                              "name": "Photo 03",
+                              "width": 96,
+                              "height": 62,
+                              "fill": "#64748B",
+                              "cornerRadius": 3,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "I119aR",
+                                  "x": 8,
+                                  "y": 38,
+                                  "name": "Photo 03 Label",
+                                  "fill": "#FFFFFF",
+                                  "content": "AC 03",
+                                  "fontFamily": "$body",
+                                  "fontSize": 10,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "W3Y1r3",
+                      "name": "Generated Report Panel",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 13,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "vG7Yf",
+                          "name": "Report Panel Title",
+                          "fill": "$navy",
+                          "content": "Preview laporan",
+                          "fontFamily": "$display",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dd9RL",
+                          "name": "Report Document",
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "fill": "#FFFFFF",
+                          "stroke": "$line",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "gap": 9,
+                          "padding": 14,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "CPxgM",
+                              "name": "Report Heading",
+                              "fill": "$navy",
+                              "content": "LAPORAN PEKERJAAN",
+                              "fontFamily": "$body",
+                              "fontSize": 10,
+                              "fontWeight": "700",
+                              "letterSpacing": 0.8
+                            },
+                            {
+                              "type": "text",
+                              "id": "PFPQN",
+                              "name": "Report Job",
+                              "fill": "$ink",
+                              "content": "Servis AC Split 2 PK",
+                              "fontFamily": "$display",
+                              "fontSize": 15,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Qffye",
+                              "name": "Report Pelangga",
+                              "fill": "$muted",
+                              "content": "Pelanggan  PT Sinar Pangan",
+                              "fontFamily": "$body",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "SvtuL",
+                              "name": "Report Teknisi ",
+                              "fill": "$muted",
+                              "content": "Teknisi  Rudi Hartono",
+                              "fontFamily": "$body",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "fJde7",
+                              "name": "Report Status  ",
+                              "fill": "$muted",
+                              "content": "Status  Selesai",
+                              "fontFamily": "$body",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "fNnab",
+                              "name": "Report Ringkasa",
+                              "fill": "$muted",
+                              "content": "Ringkasan  Pembersihan dan pengecekan unit",
+                              "fontFamily": "$body",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "E1yDm",
+      "x": 80,
+      "y": 80,
+      "name": "BisaLapor Landing Page",
+      "clip": true,
+      "width": 1440,
+      "fill": "$bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "xjTg2",
+          "name": "Sticky Navigation",
+          "width": "fill_container",
+          "height": 76,
+          "fill": "$bg",
+          "stroke": "$line",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "padding": [
+            0,
+            96
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "X9Ho8",
+              "name": "BisaLapor Brand",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ymgWI",
+                  "name": "BisaLapor Lettermark",
+                  "width": 25,
+                  "height": 25,
+                  "fill": "$navy",
+                  "cornerRadius": 8,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wlQW4",
+                      "x": 6,
+                      "y": 3,
+                      "name": "Letter B",
+                      "fill": "#FFFFFF",
+                      "content": "B",
+                      "fontFamily": "$display",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "jNroL",
+                  "name": "BisaLapor Wordmark",
+                  "fill": "$navy",
+                  "content": "BisaLapor",
+                  "fontFamily": "$display",
+                  "fontSize": 17,
+                  "fontWeight": "700",
+                  "letterSpacing": -0.4
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "l48vNE",
+              "name": "Navigation Links",
+              "gap": 28,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "l4YH2M",
+                  "name": "Nav Produk",
+                  "fill": "$muted",
+                  "content": "Produk",
+                  "fontFamily": "$body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "hyqQk",
+                  "name": "Nav Cara Kerja",
+                  "fill": "$muted",
+                  "content": "Cara Kerja",
+                  "fontFamily": "$body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "WMGMq",
+                  "name": "Nav Use Case",
+                  "fill": "$muted",
+                  "content": "Use Case",
+                  "fontFamily": "$body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "FfNfW",
+                  "name": "Masuk",
+                  "fill": "$navy",
+                  "content": "Masuk",
+                  "fontFamily": "$body",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "lpd69",
+                  "name": "Mulai Gratis Button",
+                  "fill": "$navy",
+                  "cornerRadius": 8,
+                  "padding": [
+                    10,
+                    16
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "qsUnI",
+                      "name": "Mulai Gratis Label",
+                      "fill": "#FFFFFF",
+                      "content": "Mulai Gratis",
+                      "fontFamily": "$body",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "r7zFMb",
+          "name": "Hero",
+          "width": "fill_container",
+          "stroke": "$line",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "gap": 72,
+          "padding": [
+            94,
+            96,
+            104,
+            96
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "yhzWo",
+              "name": "Hero Copy",
+              "width": 520,
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "D5y48",
+                  "name": "Hero Eyebrow",
+                  "fill": "$blue",
+                  "content": "OPERASIONAL LAPANGAN YANG TERDOKUMENTASI",
+                  "fontFamily": "$body",
+                  "fontSize": 12,
+                  "fontWeight": "700",
+                  "letterSpacing": 1.2
+                },
+                {
+                  "type": "text",
+                  "id": "fRHGE",
+                  "name": "Hero Headline",
+                  "fill": "$navy",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Kerja lapangan rapi. Dokumentasi selesai.",
+                  "lineHeight": 1.06,
+                  "fontFamily": "$display",
+                  "fontSize": 54,
+                  "fontWeight": "700",
+                  "letterSpacing": -2
+                },
+                {
+                  "type": "text",
+                  "id": "u6GDwq",
+                  "name": "Hero Description",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Ubah catatan lapangan, foto, dan pembaruan teknisi menjadi laporan kerja yang rapi—tanpa pekerjaan administrasi yang berulang.",
+                  "lineHeight": 1.55,
+                  "fontFamily": "$body",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "pQhuj",
+                  "name": "Hero Actions",
+                  "gap": 14,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "iKWMd",
+                      "name": "Hero Primary CTA",
+                      "fill": "$navy",
+                      "cornerRadius": 8,
+                      "padding": [
+                        13,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dzH6t",
+                          "name": "Hero Primary CTA Label",
+                          "fill": "#FFFFFF",
+                          "content": "Mulai Gratis",
+                          "fontFamily": "$body",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "O4zjdO",
+                      "name": "Hero Secondary CTA",
+                      "padding": [
+                        12,
+                        4
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "H9JbN",
+                          "name": "Hero Secondary CTA Label",
+                          "fill": "$navy",
+                          "content": "Lihat Cara Kerjanya  →",
+                          "fontFamily": "$body",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "a59Ugo",
+              "name": "Hero Product Preview",
+              "width": 656,
+              "height": 432,
+              "fill": "$surface",
+              "cornerRadius": 8,
+              "stroke": "$line",
+              "strokeWidth": 1,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#1D1D1F12",
+                "offset": {
+                  "x": 0,
+                  "y": 12
+                },
+                "blur": 30
+              },
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "s3J2NX",
+                  "name": "Application Topbar",
+                  "width": "fill_container",
+                  "height": 52,
+                  "fill": "$subtle",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "padding": [
+                    0,
+                    18
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "xQTIN",
+                      "name": "Application Breadcrumb",
+                      "fill": "$muted",
+                      "content": "Pekerjaan  /  WO-240318-017",
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "keAGi",
+                      "name": "Job Status",
+                      "fill": "#ECFDF5",
+                      "cornerRadius": 8,
+                      "padding": [
+                        5,
+                        9
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "iwoCd",
+                          "name": "Job Status Label",
+                          "fill": "$success",
+                          "content": "Selesai",
+                          "fontFamily": "$body",
+                          "fontSize": 11,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VDDK2",
+                  "name": "Application Content",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "P7hUSK",
+                      "name": "Work Order Panel",
+                      "width": 360,
+                      "stroke": "$line",
+                      "strokeWidth": {
+                        "right": 1
+                      },
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "yFpvs",
+                          "name": "Work Order Title",
+                          "fill": "$navy",
+                          "content": "Servis AC Split 2 PK",
+                          "fontFamily": "$display",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "l2LOj",
+                          "name": "Work Order Client",
+                          "fill": "$muted",
+                          "content": "PT Sinar Pangan • Jakarta Selatan",
+                          "fontFamily": "$body",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "G9g3PP",
+                          "name": "Technician Notes",
+                          "width": "fill_container",
+                          "fill": "$subtle",
+                          "cornerRadius": 8,
+                          "layout": "vertical",
+                          "gap": 7,
+                          "padding": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "JlrjR",
+                              "name": "Notes Label",
+                              "fill": "$muted",
+                              "content": "CATATAN TEKNISI",
+                              "fontFamily": "$body",
+                              "fontSize": 10,
+                              "fontWeight": "700",
+                              "letterSpacing": 0.8
+                            },
+                            {
+                              "type": "text",
+                              "id": "Y6qAKa",
+                              "name": "Notes Content",
+                              "fill": "$ink",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Evaporator dibersihkan, tekanan refrigeran normal. Drainase lancar setelah pembersihan.",
+                              "lineHeight": 1.45,
+                              "fontFamily": "$body",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "pC53O",
+                          "name": "Documentation Label",
+                          "fill": "$muted",
+                          "content": "DOKUMENTASI • 3 FOTO",
+                          "fontFamily": "$body",
+                          "fontSize": 10,
+                          "fontWeight": "700",
+                          "letterSpacing": 0.8
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Z1Yc0",
+                          "name": "Photo Documentation",
+                          "width": "fill_container",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "DaOGR",
+                              "name": "Photo 01",
+                              "width": 96,
+                              "height": 62,
+                              "fill": "#CBD5E1",
+                              "cornerRadius": 3,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "ybAWq",
+                                  "x": 8,
+                                  "y": 38,
+                                  "name": "Photo 01 Label",
+                                  "fill": "#FFFFFF",
+                                  "content": "AC 01",
+                                  "fontFamily": "$body",
+                                  "fontSize": 10,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "o6NFqx",
+                              "name": "Photo 02",
+                              "width": 96,
+                              "height": 62,
+                              "fill": "#94A3B8",
+                              "cornerRadius": 3,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "LNEmL",
+                                  "x": 8,
+                                  "y": 38,
+                                  "name": "Photo 02 Label",
+                                  "fill": "#FFFFFF",
+                                  "content": "AC 02",
+                                  "fontFamily": "$body",
+                                  "fontSize": 10,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "tE8UU",
+                              "name": "Photo 03",
+                              "width": 96,
+                              "height": 62,
+                              "fill": "#64748B",
+                              "cornerRadius": 3,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "H3oQP",
+                                  "x": 8,
+                                  "y": 38,
+                                  "name": "Photo 03 Label",
+                                  "fill": "#FFFFFF",
+                                  "content": "AC 03",
+                                  "fontFamily": "$body",
+                                  "fontSize": 10,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "M2TEk",
+                      "name": "Generated Report Panel",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "layout": "vertical",
+                      "gap": 13,
+                      "padding": 20,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "wEySt",
+                          "name": "Report Panel Title",
+                          "fill": "$navy",
+                          "content": "Preview laporan",
+                          "fontFamily": "$display",
+                          "fontSize": 15,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ef6ve",
+                          "name": "Report Document",
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "fill": "#FFFFFF",
+                          "stroke": "$line",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "gap": 9,
+                          "padding": 14,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "H3IDA",
+                              "name": "Report Heading",
+                              "fill": "$navy",
+                              "content": "LAPORAN PEKERJAAN",
+                              "fontFamily": "$body",
+                              "fontSize": 10,
+                              "fontWeight": "700",
+                              "letterSpacing": 0.8
+                            },
+                            {
+                              "type": "text",
+                              "id": "lzvfl",
+                              "name": "Report Job",
+                              "fill": "$ink",
+                              "content": "Servis AC Split 2 PK",
+                              "fontFamily": "$display",
+                              "fontSize": 15,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "eTitf",
+                              "name": "Report Pelangga",
+                              "fill": "$muted",
+                              "content": "Pelanggan  PT Sinar Pangan",
+                              "fontFamily": "$body",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Ir31F",
+                              "name": "Report Teknisi ",
+                              "fill": "$muted",
+                              "content": "Teknisi  Rudi Hartono",
+                              "fontFamily": "$body",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "q6yl8",
+                              "name": "Report Status  ",
+                              "fill": "$muted",
+                              "content": "Status  Selesai",
+                              "fontFamily": "$body",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "BEUG5",
+                              "name": "Report Ringkasa",
+                              "fill": "$muted",
+                              "content": "Ringkasan  Pembersihan dan pengecekan unit",
+                              "fontFamily": "$body",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "NpPws",
+          "name": "Problem Section",
+          "width": "fill_container",
+          "stroke": "$line",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "gap": 80,
+          "padding": 96,
+          "children": [
+            {
+              "type": "frame",
+              "id": "adu1o",
+              "name": "Problem Introduction",
+              "width": 410,
+              "layout": "vertical",
+              "gap": 18,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "XtuUV",
+                  "name": "Problem Eyebrow",
+                  "fill": "$blue",
+                  "content": "MASALAH YANG AKRAB",
+                  "fontFamily": "$body",
+                  "fontSize": 12,
+                  "fontWeight": "700",
+                  "letterSpacing": 1.2
+                },
+                {
+                  "type": "text",
+                  "id": "jqLaU",
+                  "name": "Problem Heading",
+                  "fill": "$navy",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Pekerjaan selesai di lapangan. Informasinya tertinggal di mana-mana.",
+                  "lineHeight": 1.12,
+                  "fontFamily": "$display",
+                  "fontSize": 38,
+                  "fontWeight": "700",
+                  "letterSpacing": -1.2
+                },
+                {
+                  "type": "text",
+                  "id": "zUn1D",
+                  "name": "Problem Description",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Saat detail pekerjaan tersebar, admin harus menyatukannya lagi sebelum pelanggan mendapat laporan yang layak.",
+                  "lineHeight": 1.55,
+                  "fontFamily": "$body",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ixRKB",
+              "name": "Problem List",
+              "width": "fill_container",
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "BZeEQ",
+                  "name": "Problem 01",
+                  "width": "fill_container",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 22,
+                  "padding": [
+                    18,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "v0AL1H",
+                      "name": "Problem Number 01",
+                      "fill": "$blue",
+                      "content": "01",
+                      "fontFamily": "$display",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Kdryv",
+                      "name": "Problem Copy 01",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 5,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "EeLIV",
+                          "name": "Problem Title 01",
+                          "fill": "$ink",
+                          "content": "Catatan di percakapan WhatsApp",
+                          "fontFamily": "$display",
+                          "fontSize": 17,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "HFE5V",
+                          "name": "Problem Detail 01",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Detail pekerjaan terselip di antara pesan tim dan pelanggan.",
+                          "lineHeight": 1.45,
+                          "fontFamily": "$body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "jE2gG",
+                  "name": "Problem 02",
+                  "width": "fill_container",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 22,
+                  "padding": [
+                    18,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "l7K49",
+                      "name": "Problem Number 02",
+                      "fill": "$blue",
+                      "content": "02",
+                      "fontFamily": "$display",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xmqf3",
+                      "name": "Problem Copy 02",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 5,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "z6dKX",
+                          "name": "Problem Title 02",
+                          "fill": "$ink",
+                          "content": "Foto sulit ditelusuri per pekerjaan",
+                          "fontFamily": "$display",
+                          "fontSize": 17,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "x4EI7",
+                          "name": "Problem Detail 02",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Dokumentasi ada, tetapi tidak selalu terhubung dengan work order.",
+                          "lineHeight": 1.45,
+                          "fontFamily": "$body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "iK5QJ",
+                  "name": "Problem 03",
+                  "width": "fill_container",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 22,
+                  "padding": [
+                    18,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Ybsno",
+                      "name": "Problem Number 03",
+                      "fill": "$blue",
+                      "content": "03",
+                      "fontFamily": "$display",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Io4dl",
+                      "name": "Problem Copy 03",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 5,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "yQGTQ",
+                          "name": "Problem Title 03",
+                          "fill": "$ink",
+                          "content": "Admin menulis ulang laporan",
+                          "fontFamily": "$display",
+                          "fontSize": 17,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "O5YmIZ",
+                          "name": "Problem Detail 03",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Catatan teknisi perlu dirapikan kembali dari awal.",
+                          "lineHeight": 1.45,
+                          "fontFamily": "$body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "oSMM7",
+                  "name": "Problem 04",
+                  "width": "fill_container",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 22,
+                  "padding": [
+                    18,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hHdqp",
+                      "name": "Problem Number 04",
+                      "fill": "$blue",
+                      "content": "04",
+                      "fontFamily": "$display",
+                      "fontSize": 16,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hdEVK",
+                      "name": "Problem Copy 04",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 5,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "rJwB7",
+                          "name": "Problem Title 04",
+                          "fill": "$ink",
+                          "content": "Laporan pelanggan terlambat terkirim",
+                          "fontFamily": "$display",
+                          "fontSize": 17,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Qfk91",
+                          "name": "Problem Detail 04",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Pekerjaan sudah selesai, laporan masih menunggu disusun.",
+                          "lineHeight": 1.45,
+                          "fontFamily": "$body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Phikd",
+          "name": "Cara Kerja Section",
+          "width": "fill_container",
+          "stroke": "$line",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            104,
+            96
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "P0OYLQ",
+              "name": "Workflow Header",
+              "width": 720,
+              "layout": "vertical",
+              "gap": 17,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Ydhfv",
+                  "name": "Workflow Eyebrow",
+                  "fill": "$blue",
+                  "content": "CARA KERJA",
+                  "fontFamily": "$body",
+                  "fontSize": 12,
+                  "fontWeight": "700",
+                  "letterSpacing": 1.2
+                },
+                {
+                  "type": "text",
+                  "id": "qd8V9",
+                  "name": "Workflow Heading",
+                  "fill": "$navy",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Dari lapangan ke laporan, tanpa putar balik ke administrasi.",
+                  "lineHeight": 1.12,
+                  "fontFamily": "$display",
+                  "fontSize": 40,
+                  "fontWeight": "700",
+                  "letterSpacing": -1.4
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "tHtA3",
+              "name": "Workflow Steps",
+              "width": "fill_container",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ZdIl4",
+                  "name": "Step 01",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": [
+                    0,
+                    28,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "aiGr6",
+                      "name": "Step Number 01",
+                      "fill": "$blue",
+                      "content": "01",
+                      "fontFamily": "$display",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "fJZGh",
+                      "name": "Step Title 01",
+                      "fill": "$navy",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Kumpulkan dokumentasi lapangan",
+                      "lineHeight": 1.18,
+                      "fontFamily": "$display",
+                      "fontSize": 21,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "aBwMa",
+                      "name": "Step Detail 01",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Teknisi mencatat pekerjaan, mengunggah foto, dan memperbarui status dari lokasi.",
+                      "lineHeight": 1.55,
+                      "fontFamily": "$body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "c0H5R",
+                  "name": "Step 02",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": [
+                    0,
+                    28,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "h97smp",
+                      "name": "Step Number 02",
+                      "fill": "$blue",
+                      "content": "02",
+                      "fontFamily": "$display",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Unvqk",
+                      "name": "Step Title 02",
+                      "fill": "$navy",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Rapikan menjadi laporan terstruktur",
+                      "lineHeight": 1.18,
+                      "fontFamily": "$display",
+                      "fontSize": 21,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "fzqac",
+                      "name": "Step Detail 02",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Informasi pekerjaan tersusun dalam format laporan yang konsisten.",
+                      "lineHeight": 1.55,
+                      "fontFamily": "$body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VxDce",
+                  "name": "Step 03",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": [
+                    0,
+                    28,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "UaARq",
+                      "name": "Step Number 03",
+                      "fill": "$blue",
+                      "content": "03",
+                      "fontFamily": "$display",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "TOnr7",
+                      "name": "Step Title 03",
+                      "fill": "$navy",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Review dan kirim ke pelanggan",
+                      "lineHeight": 1.18,
+                      "fontFamily": "$display",
+                      "fontSize": 21,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hBWfB",
+                      "name": "Step Detail 03",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Admin mengecek detail akhir lalu membagikan laporan siap kirim.",
+                      "lineHeight": 1.55,
+                      "fontFamily": "$body",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mZfmg",
+              "name": "Raw Notes Transformation",
+              "width": "fill_container",
+              "height": 260,
+              "fill": "$subtle",
+              "cornerRadius": 8,
+              "stroke": "$line",
+              "strokeWidth": 1,
+              "gap": 26,
+              "padding": 24,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kE0h5",
+                  "name": "Raw Field Notes",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 9,
+                  "padding": 17,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DttY0",
+                      "name": "Raw Notes Label",
+                      "fill": "$muted",
+                      "content": "CATATAN LAPANGAN",
+                      "fontFamily": "$body",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "mYFSi",
+                      "name": "Raw Notes Text",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "• Unit AC lobby panas\n• Filter kotor, dicuci\n• Cek tekanan freon: normal\n• Foto before / after",
+                      "lineHeight": 1.65,
+                      "fontFamily": "$body",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "f3JpS",
+                  "name": "Transformation Arrow",
+                  "width": 44,
+                  "height": 44,
+                  "fill": "$navy",
+                  "cornerRadius": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "eVfzw",
+                      "name": "Arrow Symbol",
+                      "fill": "#FFFFFF",
+                      "content": "→",
+                      "fontFamily": "$display",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "gOZqN",
+                  "name": "Structured Report",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 9,
+                  "padding": 17,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WXPCL",
+                      "name": "Structured Label",
+                      "fill": "$navy",
+                      "content": "LAPORAN PEKERJAAN",
+                      "fontFamily": "$body",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "text",
+                      "id": "wXxNd",
+                      "name": "Structured Title",
+                      "fill": "$ink",
+                      "content": "Servis AC Lobby",
+                      "fontFamily": "$display",
+                      "fontSize": 17,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "xnRRO",
+                      "name": "Structured Text",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Tindakan: Pembersihan filter dan inspeksi tekanan refrigeran.\nStatus: Selesai\nDokumentasi: 2 foto terlampir",
+                      "lineHeight": 1.55,
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "E9F2M",
+          "name": "Product Showcase",
+          "width": "fill_container",
+          "fill": "#FFFFFF",
+          "stroke": "$line",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "layout": "vertical",
+          "gap": 48,
+          "padding": [
+            104,
+            96
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "Y8UIh",
+              "name": "Showcase Header",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "OW5sq",
+                  "name": "Showcase Copy",
+                  "width": 630,
+                  "layout": "vertical",
+                  "gap": 17,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "e73GG",
+                      "name": "Showcase Eyebrow",
+                      "fill": "$blue",
+                      "content": "SATU TEMPAT UNTUK SETIAP PEKERJAAN",
+                      "fontFamily": "$body",
+                      "fontSize": 12,
+                      "fontWeight": "700",
+                      "letterSpacing": 1.2
+                    },
+                    {
+                      "type": "text",
+                      "id": "N1x9B",
+                      "name": "Showcase Heading",
+                      "fill": "$navy",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Detail yang dibutuhkan tim lapangan dan admin, dalam alur yang sama.",
+                      "lineHeight": 1.12,
+                      "fontFamily": "$display",
+                      "fontSize": 40,
+                      "fontWeight": "700",
+                      "letterSpacing": -1.4
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "Jlr3Q",
+                  "name": "Showcase Caption",
+                  "fill": "$muted",
+                  "content": "Rapi saat dikerjakan. Siap saat dikirim.",
+                  "fontFamily": "$body",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "LL5Ip",
+              "name": "Product Screens",
+              "width": "fill_container",
+              "gap": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ssUm9",
+                  "name": "Work Order Screen",
+                  "width": "fill_container",
+                  "height": 340,
+                  "fill": "$surface",
+                  "cornerRadius": 8,
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#1D1D1F0D",
+                    "offset": {
+                      "x": 0,
+                      "y": 8
+                    },
+                    "blur": 20
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Rbwny",
+                      "name": "Work Order Screen Topbar",
+                      "width": "fill_container",
+                      "height": 45,
+                      "fill": "$subtle",
+                      "stroke": "$line",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "padding": [
+                        0,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "fOhDh",
+                          "name": "Work Order Screen Window Name",
+                          "fill": "$navy",
+                          "content": "BisaLapor",
+                          "fontFamily": "$display",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "p8aoe",
+                      "name": "Work Order Screen Body",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 17,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Dts2n",
+                          "name": "Work Order Screen Title",
+                          "fill": "$navy",
+                          "content": "Work order yang jelas",
+                          "fontFamily": "$display",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "rEgva",
+                          "name": "Work Order Screen Subtitle",
+                          "fill": "$muted",
+                          "content": "WO-240318-017  •  Dijadwalkan hari ini",
+                          "fontFamily": "$body",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "zu91p",
+                          "name": "Work Order Metadata",
+                          "fill": "$subtle",
+                          "cornerRadius": 8,
+                          "layout": "vertical",
+                          "gap": 7,
+                          "padding": 11,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "LhQkV",
+                              "name": "Work Meta Pelangg",
+                              "fill": "$ink",
+                              "content": "Pelanggan   PT Cipta Ruang",
+                              "fontFamily": "$body",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "G0lP7",
+                              "name": "Work Meta Lokasi ",
+                              "fill": "$ink",
+                              "content": "Lokasi       Kuningan, Jakarta Selatan",
+                              "fontFamily": "$body",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "F6Gb0",
+                              "name": "Work Meta Teknisi",
+                              "fill": "$ink",
+                              "content": "Teknisi      Rudi Hartono",
+                              "fontFamily": "$body",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Q2Ya8",
+                          "name": "Work Order Progress",
+                          "width": "fill_container",
+                          "gap": 5,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "n7oPHe",
+                              "name": "Progress Dijadwalkan",
+                              "width": "fill_container",
+                              "fill": "#D2D2D7",
+                              "cornerRadius": 3,
+                              "padding": [
+                                7,
+                                3
+                              ],
+                              "justifyContent": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "VgpwH",
+                                  "name": "Progress Label Dijadwalkan",
+                                  "fill": "$muted",
+                                  "content": "Dijadwalkan",
+                                  "fontFamily": "$body",
+                                  "fontSize": 9,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "vDGfA",
+                              "name": "Progress Dikerjakan",
+                              "width": "fill_container",
+                              "fill": "#BFDBFE",
+                              "cornerRadius": 3,
+                              "padding": [
+                                7,
+                                3
+                              ],
+                              "justifyContent": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "wleMy",
+                                  "name": "Progress Label Dikerjakan",
+                                  "fill": "$muted",
+                                  "content": "Dikerjakan",
+                                  "fontFamily": "$body",
+                                  "fontSize": 9,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "X8TWlz",
+                              "name": "Progress Selesai",
+                              "width": "fill_container",
+                              "fill": "#ECFDF5",
+                              "cornerRadius": 3,
+                              "padding": [
+                                7,
+                                3
+                              ],
+                              "justifyContent": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "LBhaN",
+                                  "name": "Progress Label Selesai",
+                                  "fill": "$success",
+                                  "content": "Selesai",
+                                  "fontFamily": "$body",
+                                  "fontSize": 9,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "hLZhT",
+                  "name": "Report Preview Screen",
+                  "width": "fill_container",
+                  "height": 340,
+                  "fill": "$surface",
+                  "cornerRadius": 8,
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#1D1D1F0D",
+                    "offset": {
+                      "x": 0,
+                      "y": 8
+                    },
+                    "blur": 20
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "aaE6O",
+                      "name": "Report Preview Screen Topbar",
+                      "width": "fill_container",
+                      "height": 45,
+                      "fill": "$subtle",
+                      "stroke": "$line",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "padding": [
+                        0,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "J92NVU",
+                          "name": "Report Preview Screen Window Name",
+                          "fill": "$navy",
+                          "content": "BisaLapor",
+                          "fontFamily": "$display",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "B0sqh",
+                      "name": "Report Preview Screen Body",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 17,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "eKYcv",
+                          "name": "Report Preview Screen Title",
+                          "fill": "$navy",
+                          "content": "Laporan siap review",
+                          "fontFamily": "$display",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "gjEbj",
+                          "name": "Report Preview Screen Subtitle",
+                          "fill": "$muted",
+                          "content": "Format konsisten untuk setiap kunjungan",
+                          "fontFamily": "$body",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "mwuMT",
+                          "name": "Report Preview Sheet",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "stroke": "$line",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "gap": 8,
+                          "padding": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "S0KKTd",
+                              "name": "Report Preview Header",
+                              "fill": "$navy",
+                              "content": "LAPORAN SERVIS AC",
+                              "fontFamily": "$body",
+                              "fontSize": 10,
+                              "fontWeight": "700",
+                              "letterSpacing": 0.8
+                            },
+                            {
+                              "type": "text",
+                              "id": "JnFyl",
+                              "name": "Report Preview Title",
+                              "fill": "$ink",
+                              "content": "PT Cipta Ruang",
+                              "fontFamily": "$display",
+                              "fontSize": 15,
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "bgFHn",
+                              "name": "Report Item Pemeriksa",
+                              "fill": "$muted",
+                              "content": "✓  Pemeriksaan unit indoor dan outdoor",
+                              "fontFamily": "$body",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "B0q4k",
+                              "name": "Report Item Pembersih",
+                              "fill": "$muted",
+                              "content": "✓  Pembersihan filter dan evaporator",
+                              "fontFamily": "$body",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "sMQSU",
+                              "name": "Report Item Rekomenda",
+                              "fill": "$muted",
+                              "content": "✓  Rekomendasi: kontrol berkala 3 bulan",
+                              "fontFamily": "$body",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "baYbd",
+                          "name": "Report Ready Status",
+                          "fill": "#ECFDF5",
+                          "cornerRadius": 3,
+                          "padding": [
+                            7,
+                            9
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "peA5B",
+                              "name": "Report Ready Label",
+                              "fill": "$success",
+                              "content": "Siap dikirim ke pelanggan",
+                              "fontFamily": "$body",
+                              "fontSize": 10,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "UARxV",
+                  "name": "Documentation Screen",
+                  "width": "fill_container",
+                  "height": 340,
+                  "fill": "$surface",
+                  "cornerRadius": 8,
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#1D1D1F0D",
+                    "offset": {
+                      "x": 0,
+                      "y": 8
+                    },
+                    "blur": 20
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "BEO4H",
+                      "name": "Documentation Screen Topbar",
+                      "width": "fill_container",
+                      "height": 45,
+                      "fill": "$subtle",
+                      "stroke": "$line",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "padding": [
+                        0,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "tKgmK",
+                          "name": "Documentation Screen Window Name",
+                          "fill": "$navy",
+                          "content": "BisaLapor",
+                          "fontFamily": "$display",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "w2RnUX",
+                      "name": "Documentation Screen Body",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "padding": 17,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "UuXL0",
+                          "name": "Documentation Screen Title",
+                          "fill": "$navy",
+                          "content": "Dokumentasi per pekerjaan",
+                          "fontFamily": "$display",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "QxtaP",
+                          "name": "Documentation Screen Subtitle",
+                          "fill": "$muted",
+                          "content": "Semua foto dan catatan tersimpan bersama work order",
+                          "fontFamily": "$body",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "pZqTV",
+                          "name": "Documentation Gallery",
+                          "width": "fill_container",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "Jchjn",
+                              "name": "Documentation Sebelum",
+                              "width": "fill_container",
+                              "height": 112,
+                              "fill": "#94A3B8",
+                              "cornerRadius": 3,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "m203w",
+                                  "x": 8,
+                                  "y": 88,
+                                  "name": "Documentation Label Sebelum",
+                                  "fill": "#FFFFFF",
+                                  "content": "Sebelum",
+                                  "fontFamily": "$body",
+                                  "fontSize": 10,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "tjQ0A",
+                              "name": "Documentation Proses",
+                              "width": "fill_container",
+                              "height": 112,
+                              "fill": "#64748B",
+                              "cornerRadius": 3,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "W2vIO",
+                                  "x": 8,
+                                  "y": 88,
+                                  "name": "Documentation Label Proses",
+                                  "fill": "#FFFFFF",
+                                  "content": "Proses",
+                                  "fontFamily": "$body",
+                                  "fontSize": 10,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "ZcFSR",
+                              "name": "Documentation Sesudah",
+                              "width": "fill_container",
+                              "height": 112,
+                              "fill": "#CBD5E1",
+                              "cornerRadius": 3,
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "RE0lS",
+                                  "x": 8,
+                                  "y": 88,
+                                  "name": "Documentation Label Sesudah",
+                                  "fill": "#FFFFFF",
+                                  "content": "Sesudah",
+                                  "fontFamily": "$body",
+                                  "fontSize": 10,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "R1WUwx",
+                          "name": "Documentation Note",
+                          "fill": "$muted",
+                          "content": "3 foto • diunggah oleh Rudi Hartono",
+                          "fontFamily": "$body",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "wSt6p",
+          "name": "Use Cases Section",
+          "width": "fill_container",
+          "stroke": "$line",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "gap": 70,
+          "padding": 96,
+          "children": [
+            {
+              "type": "frame",
+              "id": "Gy988",
+              "name": "Use Cases Copy",
+              "width": 390,
+              "layout": "vertical",
+              "gap": 17,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "j3CR1",
+                  "name": "Use Cases Eyebrow",
+                  "fill": "$blue",
+                  "content": "DIBUAT UNTUK TIM LAPANGAN",
+                  "fontFamily": "$body",
+                  "fontSize": 12,
+                  "fontWeight": "700",
+                  "letterSpacing": 1.2
+                },
+                {
+                  "type": "text",
+                  "id": "A9afU6",
+                  "name": "Use Cases Heading",
+                  "fill": "$navy",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Setiap pekerjaan yang perlu bukti, catatan, dan laporan.",
+                  "lineHeight": 1.12,
+                  "fontFamily": "$display",
+                  "fontSize": 38,
+                  "fontWeight": "700",
+                  "letterSpacing": -1.2
+                },
+                {
+                  "type": "text",
+                  "id": "khmYz",
+                  "name": "Use Cases Description",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "BisaLapor membantu alur kerja teknisi tetap rapi, dari lokasi hingga ke pelanggan.",
+                  "lineHeight": 1.55,
+                  "fontFamily": "$body",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "B6ygP",
+              "name": "Use Case Grid",
+              "width": "fill_container",
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "C9LwQn",
+                  "name": "Use Case 01",
+                  "width": "fill_container",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 18,
+                  "padding": [
+                    18,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ZclLq",
+                      "name": "Use Case Code 01",
+                      "fill": "$blue",
+                      "content": "01",
+                      "fontFamily": "$display",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Q1LIzC",
+                      "name": "Use Case Text 01",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lbzn8",
+                          "name": "Use Case Title 01",
+                          "fill": "$ink",
+                          "content": "Servis AC",
+                          "fontFamily": "$display",
+                          "fontSize": 17,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "b5kMcH",
+                          "name": "Use Case Detail 01",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Riwayat pekerjaan, foto unit, dan hasil pemeriksaan.",
+                          "fontFamily": "$body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NSBeU",
+                  "name": "Use Case 02",
+                  "width": "fill_container",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 18,
+                  "padding": [
+                    18,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "J4fgn",
+                      "name": "Use Case Code 02",
+                      "fill": "$blue",
+                      "content": "02",
+                      "fontFamily": "$display",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "r15zm",
+                      "name": "Use Case Text 02",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "LT6r8",
+                          "name": "Use Case Title 02",
+                          "fill": "$ink",
+                          "content": "Instalasi & maintenance jaringan",
+                          "fontFamily": "$display",
+                          "fontSize": 17,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "onPjx",
+                          "name": "Use Case Detail 02",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Dokumentasi titik perangkat dan progres pekerjaan.",
+                          "fontFamily": "$body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "gtLqy",
+                  "name": "Use Case 03",
+                  "width": "fill_container",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 18,
+                  "padding": [
+                    18,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "uai1m",
+                      "name": "Use Case Code 03",
+                      "fill": "$blue",
+                      "content": "03",
+                      "fontFamily": "$display",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "iEOCg",
+                      "name": "Use Case Text 03",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "EEHkn",
+                          "name": "Use Case Title 03",
+                          "fill": "$ink",
+                          "content": "Perawatan peralatan",
+                          "fontFamily": "$display",
+                          "fontSize": 17,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "y7Tgu",
+                          "name": "Use Case Detail 03",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Checklist inspeksi dan temuan per aset.",
+                          "fontFamily": "$body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "XtOgF",
+                  "name": "Use Case 04",
+                  "width": "fill_container",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "gap": 18,
+                  "padding": [
+                    18,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "XZnqS",
+                      "name": "Use Case Code 04",
+                      "fill": "$blue",
+                      "content": "04",
+                      "fontFamily": "$display",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "IvyvL",
+                      "name": "Use Case Text 04",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "jvk1T",
+                          "name": "Use Case Title 04",
+                          "fill": "$ink",
+                          "content": "Operasional lapangan umum",
+                          "fontFamily": "$display",
+                          "fontSize": 17,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "z0AOVj",
+                          "name": "Use Case Detail 04",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Laporan kunjungan, pekerjaan, dan tindak lanjut.",
+                          "fontFamily": "$body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "qjHcq",
+          "name": "Final CTA Section",
+          "width": "fill_container",
+          "fill": "$navy",
+          "layout": "vertical",
+          "gap": 22,
+          "padding": 96,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "TnlHn",
+              "name": "CTA Eyebrow",
+              "fill": "#93C5FD",
+              "content": "MULAI LEBIH RAPI",
+              "fontFamily": "$body",
+              "fontSize": 12,
+              "fontWeight": "700",
+              "letterSpacing": 1.2
+            },
+            {
+              "type": "text",
+              "id": "yLgP6",
+              "name": "CTA Heading",
+              "fill": "#FFFFFF",
+              "textGrowth": "fixed-width",
+              "width": 690,
+              "content": "Lebih sedikit waktu untuk menyiapkan laporan.",
+              "lineHeight": 1.1,
+              "textAlign": "center",
+              "fontFamily": "$display",
+              "fontSize": 43,
+              "fontWeight": "700",
+              "letterSpacing": -1.5
+            },
+            {
+              "type": "text",
+              "id": "P5HOqs",
+              "name": "CTA Description",
+              "fill": "#CBD5E1",
+              "textGrowth": "fixed-width",
+              "width": 570,
+              "content": "Buat dokumentasi kerja lapangan yang siap ditinjau dan dibagikan kepada pelanggan.",
+              "lineHeight": 1.5,
+              "textAlign": "center",
+              "fontFamily": "$body",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "qn0q3",
+              "name": "Final CTA Button",
+              "fill": "#FFFFFF",
+              "cornerRadius": 8,
+              "padding": [
+                13,
+                19
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "V8tiel",
+                  "name": "Final CTA Button Label",
+                  "fill": "$navy",
+                  "content": "Mulai dengan BisaLapor",
+                  "fontFamily": "$body",
+                  "fontSize": 14,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "v9u5vW",
+          "name": "Footer",
+          "width": "fill_container",
+          "fill": "$bg",
+          "layout": "vertical",
+          "gap": 44,
+          "padding": [
+            48,
+            96,
+            28,
+            96
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "EYxTm",
+              "name": "Footer Top",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "vJBBs",
+                  "name": "Footer Brand Block",
+                  "width": 330,
+                  "layout": "vertical",
+                  "gap": 13,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Kkx0x",
+                      "name": "Footer Brand",
+                      "gap": 10,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "kJ81o",
+                          "name": "Footer Lettermark",
+                          "width": 24,
+                          "height": 24,
+                          "fill": "$navy",
+                          "cornerRadius": 8,
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "CBypH",
+                              "x": 7,
+                              "y": 5,
+                              "name": "Footer Letter B",
+                              "fill": "#FFFFFF",
+                              "content": "B",
+                              "fontFamily": "$display",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "TB49H",
+                          "name": "Footer Wordmark",
+                          "fill": "$navy",
+                          "content": "BisaLapor",
+                          "fontFamily": "$display",
+                          "fontSize": 17,
+                          "fontWeight": "700",
+                          "letterSpacing": -0.4
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "JUen9",
+                      "name": "Footer Tagline",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Dokumentasi kerja lapangan yang rapi, dari teknisi hingga pelanggan.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$body",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dA2J1",
+                  "name": "Footer Links",
+                  "gap": 70,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "D9bkn4",
+                      "name": "Footer Produk",
+                      "layout": "vertical",
+                      "gap": 11,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "WzgZb",
+                          "name": "Footer Produk Heading",
+                          "fill": "$navy",
+                          "content": "Produk",
+                          "fontFamily": "$body",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "rBARH",
+                          "name": "Footer Cara Kerja",
+                          "fill": "$muted",
+                          "content": "Cara Kerja",
+                          "fontFamily": "$body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Crm1m",
+                          "name": "Footer Use Case",
+                          "fill": "$muted",
+                          "content": "Use Case",
+                          "fontFamily": "$body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "qkCes",
+                          "name": "Footer Masuk",
+                          "fill": "$muted",
+                          "content": "Masuk",
+                          "fontFamily": "$body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "JVudJ",
+                      "name": "Footer Bantuan",
+                      "layout": "vertical",
+                      "gap": 11,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "GP8mR",
+                          "name": "Footer Bantuan Heading",
+                          "fill": "$navy",
+                          "content": "Bantuan",
+                          "fontFamily": "$body",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "YLWOm",
+                          "name": "Footer Pusat Bantuan",
+                          "fill": "$muted",
+                          "content": "Pusat Bantuan",
+                          "fontFamily": "$body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "UBTNP",
+                          "name": "Footer Hubungi Kami",
+                          "fill": "$muted",
+                          "content": "Hubungi Kami",
+                          "fontFamily": "$body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "wDy8g",
+                          "name": "Footer Kebijakan Privasi",
+                          "fill": "$muted",
+                          "content": "Kebijakan Privasi",
+                          "fontFamily": "$body",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ZSAoY",
+              "name": "Footer Bottom",
+              "width": "fill_container",
+              "stroke": "$line",
+              "strokeWidth": {
+                "top": 1
+              },
+              "padding": [
+                20,
+                0,
+                0,
+                0
+              ],
+              "justifyContent": "space_between",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "PLVRR",
+                  "name": "Copyright",
+                  "fill": "$muted",
+                  "content": "© 2024 BisaLapor. Semua hak dilindungi.",
+                  "fontFamily": "$body",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "KyoBX",
+                  "name": "Footer Statement",
+                  "fill": "$muted",
+                  "content": "Dibuat untuk kerja lapangan yang lebih tertata.",
+                  "fontFamily": "$body",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "bg": {
+      "type": "color",
+      "value": "#F5F5F7"
+    },
+    "surface": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "ink": {
+      "type": "color",
+      "value": "#1D1D1F"
+    },
+    "muted": {
+      "type": "color",
+      "value": "#6E6E73"
+    },
+    "line": {
+      "type": "color",
+      "value": "#D2D2D7"
+    },
+    "subtle": {
+      "type": "color",
+      "value": "#EDEDF0"
+    },
+    "navy": {
+      "type": "color",
+      "value": "#1D1D1F"
+    },
+    "blue": {
+      "type": "color",
+      "value": "#0071E3"
+    },
+    "success": {
+      "type": "color",
+      "value": "#248A3D"
+    },
+    "warning": {
+      "type": "color",
+      "value": "#B06A00"
+    },
+    "error": {
+      "type": "color",
+      "value": "#D70015"
+    },
+    "display": {
+      "type": "string",
+      "value": "Inter"
+    },
+    "body": {
+      "type": "string",
+      "value": "Inter"
+    }
+  },
+  "fileToken": "7d6cd341-22f7-431d-ada6-a645cd0a9624"
+}

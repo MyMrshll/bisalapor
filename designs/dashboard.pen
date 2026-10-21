@@ -1,0 +1,3508 @@
+{
+  "version": "2.21",
+  "children": [
+    {
+      "type": "frame",
+      "id": "G5GqUL",
+      "x": 0,
+      "y": 0,
+      "name": "BisaLapor Work Orders Dashboard",
+      "clip": true,
+      "width": 1440,
+      "height": 960,
+      "fill": "$bg",
+      "children": [
+        {
+          "type": "frame",
+          "id": "bATLU",
+          "name": "Sidebar",
+          "width": 248,
+          "height": "fill_container",
+          "fill": "$surface",
+          "stroke": "$border",
+          "strokeWidth": {
+            "right": 1
+          },
+          "layout": "vertical",
+          "padding": [
+            28,
+            20
+          ],
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "type": "frame",
+              "id": "oIWbp",
+              "name": "Brand",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 34,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "zun4l",
+                  "name": "BisaLapor logo",
+                  "gap": 10,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "xoHNE",
+                      "name": "BisaLapor lettermark",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "assets/logo-transparent.png",
+                        "mode": "contain"
+                      },
+                      "width": 27,
+                      "height": 27
+                    },
+                    {
+                      "type": "text",
+                      "id": "M5Lcxl",
+                      "name": "BisaLapor wordmark",
+                      "fill": "$navy",
+                      "content": "BisaLapor",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.4
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "oWig9",
+                  "name": "Navigation",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 5,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "XWJIN",
+                      "name": "Overview",
+                      "width": "fill_container",
+                      "height": 42,
+                      "fill": "#FFFFFF00",
+                      "cornerRadius": 8,
+                      "gap": 11,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "GZrt6",
+                          "name": "Overview icon",
+                          "width": 17,
+                          "height": 17,
+                          "icon": "LayoutDashboard",
+                          "library": "lucide",
+                          "fill": "$muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "y2VyR",
+                          "name": "Overview label",
+                          "fill": "$ink",
+                          "content": "Overview",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Uc7Kn",
+                      "name": "Work Orders",
+                      "width": "fill_container",
+                      "height": 42,
+                      "fill": "$navy",
+                      "cornerRadius": 8,
+                      "gap": 11,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "O0K1VK",
+                          "name": "Work Orders icon",
+                          "width": 17,
+                          "height": 17,
+                          "icon": "ClipboardList",
+                          "library": "lucide",
+                          "fill": "#FFFFFF"
+                        },
+                        {
+                          "type": "text",
+                          "id": "h9nOcV",
+                          "name": "Work Orders label",
+                          "fill": "#FFFFFF",
+                          "content": "Work Orders",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "FFyNa",
+                      "name": "Reports",
+                      "width": "fill_container",
+                      "height": 42,
+                      "fill": "#FFFFFF00",
+                      "cornerRadius": 8,
+                      "gap": 11,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "LVmzA",
+                          "name": "Reports icon",
+                          "width": 17,
+                          "height": 17,
+                          "icon": "FileText",
+                          "library": "lucide",
+                          "fill": "$muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "cEmKC",
+                          "name": "Reports label",
+                          "fill": "$ink",
+                          "content": "Reports",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "N5JjcP",
+                      "name": "Customers",
+                      "width": "fill_container",
+                      "height": 42,
+                      "fill": "#FFFFFF00",
+                      "cornerRadius": 8,
+                      "gap": 11,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "vbL12",
+                          "name": "Customers icon",
+                          "width": 17,
+                          "height": 17,
+                          "icon": "Users",
+                          "library": "lucide",
+                          "fill": "$muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "EHIuW",
+                          "name": "Customers label",
+                          "fill": "$ink",
+                          "content": "Customers",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Z6TXu",
+                      "name": "Team",
+                      "width": "fill_container",
+                      "height": 42,
+                      "fill": "#FFFFFF00",
+                      "cornerRadius": 8,
+                      "gap": 11,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "iVOTN",
+                          "name": "Team icon",
+                          "width": 17,
+                          "height": 17,
+                          "icon": "UserRound",
+                          "library": "lucide",
+                          "fill": "$muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "MO5Xx",
+                          "name": "Team label",
+                          "fill": "$ink",
+                          "content": "Team",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "BOIxE",
+                      "name": "Settings",
+                      "width": "fill_container",
+                      "height": 42,
+                      "fill": "#FFFFFF00",
+                      "cornerRadius": 8,
+                      "gap": 11,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "yMG6w",
+                          "name": "Settings icon",
+                          "width": 17,
+                          "height": 17,
+                          "icon": "Settings",
+                          "library": "lucide",
+                          "fill": "$muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "bqubo",
+                          "name": "Settings label",
+                          "fill": "$ink",
+                          "content": "Settings",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "LV7J6",
+              "name": "Account block",
+              "width": "fill_container",
+              "cornerRadius": 8,
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "gap": 10,
+              "padding": [
+                15,
+                10
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "gd4wH",
+                  "name": "User avatar",
+                  "fill": "$navy",
+                  "width": 32,
+                  "height": 32
+                },
+                {
+                  "type": "frame",
+                  "id": "X2Xzr",
+                  "name": "Account details",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mBNhr",
+                      "name": "Account name",
+                      "fill": "$ink",
+                      "content": "Rafi Pratama",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "wf8oG",
+                      "name": "Account role",
+                      "fill": "$muted",
+                      "content": "Administrator",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "icon",
+                  "id": "JjSGv",
+                  "name": "Account menu",
+                  "width": 15,
+                  "height": 15,
+                  "icon": "ChevronsUpDown",
+                  "library": "lucide",
+                  "fill": "$muted"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "mLXRw",
+          "name": "Main content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "fill": "$bg",
+          "layout": "vertical",
+          "gap": 26,
+          "padding": [
+            38,
+            48
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "yXGyO",
+              "name": "Breadcrumb",
+              "height": 18,
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "p4WVmy",
+                  "name": "Breadcrumb home",
+                  "fill": "$muted",
+                  "content": "Operasional",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "pV8Lt",
+                  "name": "Breadcrumb divider",
+                  "fill": "$border",
+                  "content": "/",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "W24rjn",
+                  "name": "Breadcrumb current",
+                  "fill": "$ink",
+                  "content": "Work Orders",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "B6YoMx",
+              "name": "Page header",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "GR99o",
+                  "name": "Page title area",
+                  "layout": "vertical",
+                  "gap": 7,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bDxkk",
+                      "name": "Page title",
+                      "fill": "$ink",
+                      "content": "Work Orders",
+                      "fontFamily": "Inter",
+                      "fontSize": 30,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.8
+                    },
+                    {
+                      "type": "text",
+                      "id": "H7cRh",
+                      "name": "Page subtitle",
+                      "fill": "$muted",
+                      "content": "Pantau pekerjaan lapangan dan status laporan tim Anda.",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "T4ganr",
+                  "name": "New work order button",
+                  "fill": "$navy",
+                  "cornerRadius": 8,
+                  "gap": 8,
+                  "padding": [
+                    11,
+                    14
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "UJQXR",
+                      "name": "Add icon",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "Plus",
+                      "library": "lucide",
+                      "fill": "#FFFFFF"
+                    },
+                    {
+                      "type": "text",
+                      "id": "VXaHO",
+                      "name": "New order label",
+                      "fill": "#FFFFFF",
+                      "content": "Buat pekerjaan",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "CoBXf",
+              "name": "Search and filters",
+              "width": "fill_container",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kg3ET",
+                  "name": "Search field",
+                  "width": 410,
+                  "height": 42,
+                  "fill": "$surface",
+                  "cornerRadius": 8,
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "gap": 9,
+                  "padding": [
+                    0,
+                    13
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "BY16h",
+                      "name": "Search icon",
+                      "width": 17,
+                      "height": 17,
+                      "icon": "Search",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    },
+                    {
+                      "type": "text",
+                      "id": "u73Cfr",
+                      "name": "Search placeholder",
+                      "fill": "$muted",
+                      "content": "Cari pekerjaan, pelanggan, atau teknisi",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QYMoD",
+                  "name": "Filter Status pekerjaan",
+                  "height": 42,
+                  "fill": "$surface",
+                  "cornerRadius": 8,
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "gap": 8,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "X3vhSC",
+                      "name": "Status pekerjaan text",
+                      "fill": "$ink",
+                      "content": "Status pekerjaan",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "UpWuA",
+                      "name": "Status pekerjaan chevron",
+                      "width": 15,
+                      "height": 15,
+                      "icon": "ChevronDown",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "slH2j",
+                  "name": "Filter Status laporan",
+                  "height": 42,
+                  "fill": "$surface",
+                  "cornerRadius": 8,
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "gap": 8,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "nRZBH",
+                      "name": "Status laporan text",
+                      "fill": "$ink",
+                      "content": "Status laporan",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "Sy73A",
+                      "name": "Status laporan chevron",
+                      "width": 15,
+                      "height": 15,
+                      "icon": "ChevronDown",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "l0626x",
+                  "name": "Filter 22–28 Jul 2024",
+                  "height": 42,
+                  "fill": "$surface",
+                  "cornerRadius": 8,
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "gap": 8,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "IsEwt",
+                      "name": "22–28 Jul 2024 text",
+                      "fill": "$ink",
+                      "content": "22–28 Jul 2024",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "G1sKkP",
+                      "name": "22–28 Jul 2024 chevron",
+                      "width": 15,
+                      "height": 15,
+                      "icon": "ChevronDown",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "KDL3u",
+              "name": "Summary strip",
+              "width": "fill_container",
+              "height": 86,
+              "fill": "$surface",
+              "cornerRadius": 8,
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "B6Sbn",
+                  "name": "PEKERJAAN AKTIF",
+                  "width": "fill_container",
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "right": 1
+                  },
+                  "gap": 13,
+                  "padding": [
+                    16,
+                    22
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Rfs9C",
+                      "name": "PEKERJAAN AKTIF count",
+                      "fill": "$navy",
+                      "content": "04",
+                      "fontFamily": "Inter",
+                      "fontSize": 27,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "bVjec",
+                      "name": "PEKERJAAN AKTIF text",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "cFWjJ",
+                          "name": "PEKERJAAN AKTIF title",
+                          "fill": "$muted",
+                          "content": "PEKERJAAN AKTIF",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "700",
+                          "letterSpacing": 0.4
+                        },
+                        {
+                          "type": "text",
+                          "id": "sndJS",
+                          "name": "PEKERJAAN AKTIF detail",
+                          "fill": "$ink",
+                          "content": "Dalam jadwal dan pengerjaan",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "O7AqGJ",
+                  "name": "MENUNGGU REVIEW LAPORAN",
+                  "width": "fill_container",
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "right": 1
+                  },
+                  "gap": 13,
+                  "padding": [
+                    16,
+                    22
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "l2wtG",
+                      "name": "MENUNGGU REVIEW LAPORAN count",
+                      "fill": "$navy",
+                      "content": "02",
+                      "fontFamily": "Inter",
+                      "fontSize": 27,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "YlEYj",
+                      "name": "MENUNGGU REVIEW LAPORAN text",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "EQE5z",
+                          "name": "MENUNGGU REVIEW LAPORAN title",
+                          "fill": "$muted",
+                          "content": "MENUNGGU REVIEW LAPORAN",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "700",
+                          "letterSpacing": 0.4
+                        },
+                        {
+                          "type": "text",
+                          "id": "kavdW",
+                          "name": "MENUNGGU REVIEW LAPORAN detail",
+                          "fill": "$ink",
+                          "content": "Perlu tindakan admin",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vBpR3",
+                  "name": "SELESAI MINGGU INI",
+                  "width": "fill_container",
+                  "stroke": "#FFFFFF00",
+                  "gap": 13,
+                  "padding": [
+                    16,
+                    22
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "U5oRVi",
+                      "name": "SELESAI MINGGU INI count",
+                      "fill": "$navy",
+                      "content": "01",
+                      "fontFamily": "Inter",
+                      "fontSize": 27,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ugEa0",
+                      "name": "SELESAI MINGGU INI text",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "L4vkPm",
+                          "name": "SELESAI MINGGU INI title",
+                          "fill": "$muted",
+                          "content": "SELESAI MINGGU INI",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "700",
+                          "letterSpacing": 0.4
+                        },
+                        {
+                          "type": "text",
+                          "id": "tTtTz",
+                          "name": "SELESAI MINGGU INI detail",
+                          "fill": "$ink",
+                          "content": "Laporan telah terkirim",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "VAtKm",
+              "name": "Work orders table",
+              "clip": true,
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "$surface",
+              "cornerRadius": 8,
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "bUoa0",
+                  "name": "Table header",
+                  "width": "fill_container",
+                  "height": 46,
+                  "fill": "$subtle",
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "padding": [
+                    0,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jcOmR",
+                      "name": "Header PEKERJAAN",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 250,
+                      "content": "PEKERJAAN",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "R3jwsO",
+                      "name": "Header PELANGGAN",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "PELANGGAN",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "vDt95",
+                      "name": "Header TEKNISI",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 130,
+                      "content": "TEKNISI",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "PIT3j",
+                      "name": "Header TANGGAL",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 100,
+                      "content": "TANGGAL",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "aKtxM",
+                      "name": "Header STATUS PEKERJAAN",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "STATUS PEKERJAAN",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "ssWOA",
+                      "name": "Header STATUS LAPORAN",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 145,
+                      "content": "STATUS LAPORAN",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "BWzU2",
+                      "name": "Header actions",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 30,
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 0.5
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "tqm2Y",
+                  "name": "Row Servis AC Split 2 PK",
+                  "width": "fill_container",
+                  "height": 76,
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "padding": [
+                    0,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "fIraI",
+                      "name": "Work order",
+                      "width": 250,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "mvpBV",
+                          "name": "Work title",
+                          "fill": "$ink",
+                          "content": "Servis AC Split 2 PK",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "PvLOd",
+                          "name": "Work id",
+                          "fill": "$muted",
+                          "content": "WO-2024-120",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "X8Ggz",
+                      "name": "Cell 1",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "PT Cipta Ruang",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "LyP1g",
+                      "name": "Cell 2",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 130,
+                      "content": "Andi Saputra",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "n5X9Ry",
+                      "name": "Cell 3",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 100,
+                      "content": "24 Jul 2024",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "nxfwh",
+                      "name": "Job status Dijadwalkan",
+                      "width": 150,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "N7nw7b",
+                          "name": "Job status dot",
+                          "fill": "$warning",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "r77UUD",
+                          "name": "Job status label",
+                          "fill": "$ink",
+                          "content": "Dijadwalkan",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "FOMnL",
+                      "name": "Report status Belum ada",
+                      "width": 145,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "T1MRs",
+                          "name": "Report status dot",
+                          "fill": "$muted",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "U1WtT",
+                          "name": "Report status label",
+                          "fill": "$ink",
+                          "content": "Belum ada",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon",
+                      "id": "zJws7",
+                      "name": "Row actions",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "MoreHorizontal",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Ldibt",
+                  "name": "Row Instalasi jaringan kantor",
+                  "width": "fill_container",
+                  "height": 76,
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "padding": [
+                    0,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "xSqw9",
+                      "name": "Work order",
+                      "width": 250,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "vpkxm",
+                          "name": "Work title",
+                          "fill": "$ink",
+                          "content": "Instalasi jaringan kantor",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "SAA2V",
+                          "name": "Work id",
+                          "fill": "$muted",
+                          "content": "WO-2024-121",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "zIOeK",
+                      "name": "Cell 1",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "Kantor Satu Arah",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "VNfTe",
+                      "name": "Cell 2",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 130,
+                      "content": "Bima Prakoso",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "pFkQV",
+                      "name": "Cell 3",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 100,
+                      "content": "24 Jul 2024",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xCNaj",
+                      "name": "Job status Dikerjakan",
+                      "width": 150,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "tblhy",
+                          "name": "Job status dot",
+                          "fill": "$blue",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "zEVqb",
+                          "name": "Job status label",
+                          "fill": "$ink",
+                          "content": "Dikerjakan",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "N8SgZ9",
+                      "name": "Report status Draf",
+                      "width": 145,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "Ajzq1",
+                          "name": "Report status dot",
+                          "fill": "$blue",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "RLvkU",
+                          "name": "Report status label",
+                          "fill": "$ink",
+                          "content": "Draf",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon",
+                      "id": "s0V1I7",
+                      "name": "Row actions",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "MoreHorizontal",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "t7UZs",
+                  "name": "Row Maintenance genset 250 kVA",
+                  "width": "fill_container",
+                  "height": 76,
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "padding": [
+                    0,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "cIqSe",
+                      "name": "Work order",
+                      "width": 250,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "vlbFy",
+                          "name": "Work title",
+                          "fill": "$ink",
+                          "content": "Maintenance genset 250 kVA",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "gUvcq",
+                          "name": "Work id",
+                          "fill": "$muted",
+                          "content": "WO-2024-122",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "T1EH0t",
+                      "name": "Cell 1",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "PT Energi Mandiri",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "wcR8O",
+                      "name": "Cell 2",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 130,
+                      "content": "Dewi Lestari",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "calnt",
+                      "name": "Cell 3",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 100,
+                      "content": "25 Jul 2024",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ghHUj",
+                      "name": "Job status Dikerjakan",
+                      "width": 150,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "q1FSRa",
+                          "name": "Job status dot",
+                          "fill": "$blue",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "QZQPk",
+                          "name": "Job status label",
+                          "fill": "$ink",
+                          "content": "Dikerjakan",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "TeFZH",
+                      "name": "Report status Perlu review",
+                      "width": 145,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "YaKCb",
+                          "name": "Report status dot",
+                          "fill": "$warning",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "Vnkm7",
+                          "name": "Report status label",
+                          "fill": "$ink",
+                          "content": "Perlu review",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon",
+                      "id": "y6Zbjq",
+                      "name": "Row actions",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "MoreHorizontal",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "e0gkMz",
+                  "name": "Row Perawatan chiller gedung A",
+                  "width": "fill_container",
+                  "height": 76,
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "padding": [
+                    0,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "JvXOV",
+                      "name": "Work order",
+                      "width": 250,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Ninqf",
+                          "name": "Work title",
+                          "fill": "$ink",
+                          "content": "Perawatan chiller gedung A",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "cqODG",
+                          "name": "Work id",
+                          "fill": "$muted",
+                          "content": "WO-2024-123",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "jcpRs",
+                      "name": "Cell 1",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "Hotel Duta Raya",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "f2R9xG",
+                      "name": "Cell 2",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 130,
+                      "content": "Fajar Nugroho",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "n0ONO",
+                      "name": "Cell 3",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 100,
+                      "content": "26 Jul 2024",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "OzDYM",
+                      "name": "Job status Dijadwalkan",
+                      "width": 150,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "o93hGY",
+                          "name": "Job status dot",
+                          "fill": "$warning",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "jlbou",
+                          "name": "Job status label",
+                          "fill": "$ink",
+                          "content": "Dijadwalkan",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "jjcaC",
+                      "name": "Report status Belum ada",
+                      "width": 145,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "N6Lpv",
+                          "name": "Report status dot",
+                          "fill": "$muted",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "pLc9U",
+                          "name": "Report status label",
+                          "fill": "$ink",
+                          "content": "Belum ada",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon",
+                      "id": "YjIsA",
+                      "name": "Row actions",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "MoreHorizontal",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "P8K7vj",
+                  "name": "Row Servis AC cassette lantai 3",
+                  "width": "fill_container",
+                  "height": 76,
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "padding": [
+                    0,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "uftXA",
+                      "name": "Work order",
+                      "width": 250,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "yxCB2",
+                          "name": "Work title",
+                          "fill": "$ink",
+                          "content": "Servis AC cassette lantai 3",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "O9JP5T",
+                          "name": "Work id",
+                          "fill": "$muted",
+                          "content": "WO-2024-124",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "ILDRo",
+                      "name": "Cell 1",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "CV Arunika Properti",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "AIyfY",
+                      "name": "Cell 2",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 130,
+                      "content": "Rizky Mahendra",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "O1i9e8",
+                      "name": "Cell 3",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 100,
+                      "content": "22 Jul 2024",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "RC6AV",
+                      "name": "Job status Selesai",
+                      "width": 150,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "efTBx",
+                          "name": "Job status dot",
+                          "fill": "$success",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "KHq6q",
+                          "name": "Job status label",
+                          "fill": "$ink",
+                          "content": "Selesai",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "GodHt",
+                      "name": "Report status Terkirim",
+                      "width": 145,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "wZI77",
+                          "name": "Report status dot",
+                          "fill": "$success",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "RUKnF",
+                          "name": "Report status label",
+                          "fill": "$ink",
+                          "content": "Terkirim",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon",
+                      "id": "C47Wj",
+                      "name": "Row actions",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "MoreHorizontal",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "k7OAJw",
+      "x": 1520,
+      "y": 0,
+      "name": "BisaLapor Work Orders Dashboard",
+      "clip": true,
+      "width": 1440,
+      "height": 960,
+      "fill": "$bg",
+      "children": [
+        {
+          "type": "frame",
+          "id": "f0uUsc",
+          "name": "Sidebar",
+          "width": 248,
+          "height": "fill_container",
+          "fill": "$surface",
+          "stroke": "$border",
+          "strokeWidth": {
+            "right": 1
+          },
+          "layout": "vertical",
+          "padding": [
+            28,
+            20
+          ],
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "type": "frame",
+              "id": "xlV1K",
+              "name": "Brand",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 34,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ionab",
+                  "name": "BisaLapor logo",
+                  "gap": 10,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "HvFA6",
+                      "name": "BisaLapor lettermark",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "assets/logo-transparent.png",
+                        "mode": "contain"
+                      },
+                      "width": 27,
+                      "height": 27
+                    },
+                    {
+                      "type": "text",
+                      "id": "Redrk",
+                      "name": "BisaLapor wordmark",
+                      "fill": "$navy",
+                      "content": "BisaLapor",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.4
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "tmeeG",
+                  "name": "Navigation",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 5,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "HaQWZ",
+                      "name": "Overview",
+                      "width": "fill_container",
+                      "height": 42,
+                      "fill": "#FFFFFF00",
+                      "cornerRadius": 8,
+                      "gap": 11,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "TrDUx",
+                          "name": "Overview icon",
+                          "width": 17,
+                          "height": 17,
+                          "icon": "layout-dashboard",
+                          "library": "lucide",
+                          "fill": "$muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ugGMO",
+                          "name": "Overview label",
+                          "fill": "$ink",
+                          "content": "Overview",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "dWWmX",
+                      "name": "Work Orders",
+                      "width": "fill_container",
+                      "height": 42,
+                      "fill": "$navy",
+                      "cornerRadius": 8,
+                      "gap": 11,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "by893",
+                          "name": "Work Orders icon",
+                          "width": 17,
+                          "height": 17,
+                          "icon": "clipboard-list",
+                          "library": "lucide",
+                          "fill": "#FFFFFF"
+                        },
+                        {
+                          "type": "text",
+                          "id": "PI8F9",
+                          "name": "Work Orders label",
+                          "fill": "#FFFFFF",
+                          "content": "Work Orders",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "swZ56",
+                      "name": "Reports",
+                      "width": "fill_container",
+                      "height": 42,
+                      "fill": "#FFFFFF00",
+                      "cornerRadius": 8,
+                      "gap": 11,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "UTneg",
+                          "name": "Reports icon",
+                          "width": 17,
+                          "height": 17,
+                          "icon": "file-text",
+                          "library": "lucide",
+                          "fill": "$muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "GgROX",
+                          "name": "Reports label",
+                          "fill": "$ink",
+                          "content": "Reports",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "D99vaD",
+                      "name": "Customers",
+                      "width": "fill_container",
+                      "height": 42,
+                      "fill": "#FFFFFF00",
+                      "cornerRadius": 8,
+                      "gap": 11,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "yi3x9",
+                          "name": "Customers icon",
+                          "width": 17,
+                          "height": 17,
+                          "icon": "users",
+                          "library": "lucide",
+                          "fill": "$muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "hbY2R",
+                          "name": "Customers label",
+                          "fill": "$ink",
+                          "content": "Customers",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "zJ7fL",
+                      "name": "Team",
+                      "width": "fill_container",
+                      "height": 42,
+                      "fill": "#FFFFFF00",
+                      "cornerRadius": 8,
+                      "gap": 11,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "JQUS6",
+                          "name": "Team icon",
+                          "width": 17,
+                          "height": 17,
+                          "icon": "user-round",
+                          "library": "lucide",
+                          "fill": "$muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "cnm96",
+                          "name": "Team label",
+                          "fill": "$ink",
+                          "content": "Team",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "PF0lF",
+                      "name": "Settings",
+                      "width": "fill_container",
+                      "height": 42,
+                      "fill": "#FFFFFF00",
+                      "cornerRadius": 8,
+                      "gap": 11,
+                      "padding": [
+                        0,
+                        12
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "VY0oH",
+                          "name": "Settings icon",
+                          "width": 17,
+                          "height": 17,
+                          "icon": "settings",
+                          "library": "lucide",
+                          "fill": "$muted"
+                        },
+                        {
+                          "type": "text",
+                          "id": "z5DyK",
+                          "name": "Settings label",
+                          "fill": "$ink",
+                          "content": "Settings",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "OyeG2",
+              "name": "Account block",
+              "width": "fill_container",
+              "cornerRadius": 8,
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "gap": 10,
+              "padding": [
+                15,
+                10
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "d21jk",
+                  "name": "User avatar",
+                  "fill": "$navy",
+                  "width": 32,
+                  "height": 32
+                },
+                {
+                  "type": "frame",
+                  "id": "l9sS7",
+                  "name": "Account details",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bPEyi",
+                      "name": "Account name",
+                      "fill": "$ink",
+                      "content": "Rafi Pratama",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "u8jFGS",
+                      "name": "Account role",
+                      "fill": "$muted",
+                      "content": "Administrator",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "icon",
+                  "id": "I6owxA",
+                  "name": "Account menu",
+                  "width": 15,
+                  "height": 15,
+                  "icon": "chevrons-up-down",
+                  "library": "lucide",
+                  "fill": "$muted"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "vgLfh",
+          "name": "Main content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "fill": "$bg",
+          "layout": "vertical",
+          "gap": 26,
+          "padding": [
+            38,
+            48
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "mXbex",
+              "name": "Breadcrumb",
+              "height": 18,
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "v7noBN",
+                  "name": "Breadcrumb home",
+                  "fill": "$muted",
+                  "content": "Operasional",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "j7TqXo",
+                  "name": "Breadcrumb divider",
+                  "fill": "$border",
+                  "content": "/",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Gw5Kj",
+                  "name": "Breadcrumb current",
+                  "fill": "$ink",
+                  "content": "Work Orders",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Onpbb",
+              "name": "Page header",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "end",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "F5TeN",
+                  "name": "Page title area",
+                  "layout": "vertical",
+                  "gap": 7,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WuyMf",
+                      "name": "Page title",
+                      "fill": "$ink",
+                      "content": "Work Orders",
+                      "fontFamily": "Inter",
+                      "fontSize": 30,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.8
+                    },
+                    {
+                      "type": "text",
+                      "id": "z87uyT",
+                      "name": "Page subtitle",
+                      "fill": "$muted",
+                      "content": "Pantau pekerjaan lapangan dan status laporan tim Anda.",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "O0P8O",
+                  "name": "New work order button",
+                  "fill": "$navy",
+                  "cornerRadius": 8,
+                  "gap": 8,
+                  "padding": [
+                    11,
+                    14
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "l3uzk0",
+                      "name": "Add icon",
+                      "width": 16,
+                      "height": 16,
+                      "icon": "plus",
+                      "library": "lucide",
+                      "fill": "#FFFFFF"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Bplxy",
+                      "name": "New order label",
+                      "fill": "#FFFFFF",
+                      "content": "Buat pekerjaan",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Hyuva",
+              "name": "Search and filters",
+              "width": "fill_container",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "NHQMJ",
+                  "name": "Search field",
+                  "width": 410,
+                  "height": 42,
+                  "fill": "$surface",
+                  "cornerRadius": 8,
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "gap": 9,
+                  "padding": [
+                    0,
+                    13
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "ZFmNn",
+                      "name": "Search icon",
+                      "width": 17,
+                      "height": 17,
+                      "icon": "search",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    },
+                    {
+                      "type": "text",
+                      "id": "V4Fj7b",
+                      "name": "Search placeholder",
+                      "fill": "$muted",
+                      "content": "Cari pekerjaan, pelanggan, atau teknisi",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "HwKfs",
+                  "name": "Filter Status pekerjaan",
+                  "height": 42,
+                  "fill": "$surface",
+                  "cornerRadius": 8,
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "gap": 8,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "R8ajR",
+                      "name": "Status pekerjaan text",
+                      "fill": "$ink",
+                      "content": "Status pekerjaan",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "WQzmu",
+                      "name": "Status pekerjaan chevron",
+                      "width": 15,
+                      "height": 15,
+                      "icon": "chevron-down",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "L2HSV",
+                  "name": "Filter Status laporan",
+                  "height": 42,
+                  "fill": "$surface",
+                  "cornerRadius": 8,
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "gap": 8,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jGBwz",
+                      "name": "Status laporan text",
+                      "fill": "$ink",
+                      "content": "Status laporan",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "Txt4B",
+                      "name": "Status laporan chevron",
+                      "width": 15,
+                      "height": 15,
+                      "icon": "chevron-down",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "RFRhu",
+                  "name": "Filter 22–28 Jul 2024",
+                  "height": 42,
+                  "fill": "$surface",
+                  "cornerRadius": 8,
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "gap": 8,
+                  "padding": [
+                    0,
+                    12
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "AeLSX",
+                      "name": "22–28 Jul 2024 text",
+                      "fill": "$ink",
+                      "content": "22–28 Jul 2024",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "ZvysX",
+                      "name": "22–28 Jul 2024 chevron",
+                      "width": 15,
+                      "height": 15,
+                      "icon": "chevron-down",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "D1ZXqn",
+              "name": "Summary strip",
+              "width": "fill_container",
+              "height": 86,
+              "fill": "$surface",
+              "cornerRadius": 8,
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Hscv0",
+                  "name": "PEKERJAAN AKTIF",
+                  "width": "fill_container",
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "right": 1
+                  },
+                  "gap": 13,
+                  "padding": [
+                    16,
+                    22
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "b1mb1j",
+                      "name": "PEKERJAAN AKTIF count",
+                      "fill": "$navy",
+                      "content": "04",
+                      "fontFamily": "Inter",
+                      "fontSize": 27,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "CZgS1",
+                      "name": "PEKERJAAN AKTIF text",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "V1AhB",
+                          "name": "PEKERJAAN AKTIF title",
+                          "fill": "$muted",
+                          "content": "PEKERJAAN AKTIF",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "700",
+                          "letterSpacing": 0.4
+                        },
+                        {
+                          "type": "text",
+                          "id": "qDjDB",
+                          "name": "PEKERJAAN AKTIF detail",
+                          "fill": "$ink",
+                          "content": "Dalam jadwal dan pengerjaan",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "TmJBH",
+                  "name": "MENUNGGU REVIEW LAPORAN",
+                  "width": "fill_container",
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "right": 1
+                  },
+                  "gap": 13,
+                  "padding": [
+                    16,
+                    22
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "E1Qn5",
+                      "name": "MENUNGGU REVIEW LAPORAN count",
+                      "fill": "$navy",
+                      "content": "01",
+                      "fontFamily": "Inter",
+                      "fontSize": 27,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ic2jG",
+                      "name": "MENUNGGU REVIEW LAPORAN text",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ihRmt",
+                          "name": "MENUNGGU REVIEW LAPORAN title",
+                          "fill": "$muted",
+                          "content": "MENUNGGU REVIEW LAPORAN",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "700",
+                          "letterSpacing": 0.4
+                        },
+                        {
+                          "type": "text",
+                          "id": "e6VSK",
+                          "name": "MENUNGGU REVIEW LAPORAN detail",
+                          "fill": "$ink",
+                          "content": "Perlu tindakan admin",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "P5F0d0",
+                  "name": "SELESAI MINGGU INI",
+                  "width": "fill_container",
+                  "stroke": "#FFFFFF00",
+                  "gap": 13,
+                  "padding": [
+                    16,
+                    22
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "S6uQR",
+                      "name": "SELESAI MINGGU INI count",
+                      "fill": "$navy",
+                      "content": "01",
+                      "fontFamily": "Inter",
+                      "fontSize": 27,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.6
+                    },
+                    {
+                      "type": "frame",
+                      "id": "WDWVs",
+                      "name": "SELESAI MINGGU INI text",
+                      "layout": "vertical",
+                      "gap": 3,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "nPEft",
+                          "name": "SELESAI MINGGU INI title",
+                          "fill": "$muted",
+                          "content": "SELESAI MINGGU INI",
+                          "fontFamily": "Inter",
+                          "fontSize": 10,
+                          "fontWeight": "700",
+                          "letterSpacing": 0.4
+                        },
+                        {
+                          "type": "text",
+                          "id": "bRTb6",
+                          "name": "SELESAI MINGGU INI detail",
+                          "fill": "$ink",
+                          "content": "Laporan telah terkirim",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "JWLPp",
+              "name": "Work orders table",
+              "clip": true,
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "$surface",
+              "cornerRadius": 8,
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "C1DSV",
+                  "name": "Table header",
+                  "width": "fill_container",
+                  "height": 46,
+                  "fill": "$subtle",
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "padding": [
+                    0,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "phNYg",
+                      "name": "Header PEKERJAAN",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 250,
+                      "content": "PEKERJAAN",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "BEzpb",
+                      "name": "Header PELANGGAN",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "PELANGGAN",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "Jzs3f",
+                      "name": "Header TEKNISI",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 130,
+                      "content": "TEKNISI",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "b9i1Cr",
+                      "name": "Header TANGGAL",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 100,
+                      "content": "TANGGAL",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "c9lotf",
+                      "name": "Header STATUS PEKERJAAN",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "STATUS PEKERJAAN",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "OBiw3",
+                      "name": "Header STATUS LAPORAN",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 145,
+                      "content": "STATUS LAPORAN",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "UP0Xf",
+                      "name": "Header actions",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 30,
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "700",
+                      "letterSpacing": 0.5
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "RQAAl",
+                  "name": "Row Servis AC Split 2 PK",
+                  "width": "fill_container",
+                  "height": 76,
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "padding": [
+                    0,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "nm6dN",
+                      "name": "Work order",
+                      "width": 250,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "BRDLv",
+                          "name": "Work title",
+                          "fill": "$ink",
+                          "content": "Servis AC Split 2 PK",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "B6peH",
+                          "name": "Work id",
+                          "fill": "$muted",
+                          "content": "WO-2024-120",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "pOj4n",
+                      "name": "Cell 1",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "PT Cipta Ruang",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "t4romc",
+                      "name": "Cell 2",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 130,
+                      "content": "Andi Saputra",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "XWQlH",
+                      "name": "Cell 3",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 100,
+                      "content": "24 Jul 2024",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "YYPU2",
+                      "name": "Job status Dijadwalkan",
+                      "width": 150,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "U1SD2",
+                          "name": "Job status dot",
+                          "fill": "$warning",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "DFLh9",
+                          "name": "Job status label",
+                          "fill": "$ink",
+                          "content": "Dijadwalkan",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "rLjku",
+                      "name": "Report status Belum ada",
+                      "width": 145,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "WHLLI",
+                          "name": "Report status dot",
+                          "fill": "$muted",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "DCMGg",
+                          "name": "Report status label",
+                          "fill": "$ink",
+                          "content": "Belum ada",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon",
+                      "id": "YFm7B",
+                      "name": "Row actions",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "ellipsis",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "thaWA",
+                  "name": "Row Instalasi jaringan kantor",
+                  "width": "fill_container",
+                  "height": 76,
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "padding": [
+                    0,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "kxDdz",
+                      "name": "Work order",
+                      "width": 250,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "hYtRo",
+                          "name": "Work title",
+                          "fill": "$ink",
+                          "content": "Instalasi jaringan kantor",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "FTaY3",
+                          "name": "Work id",
+                          "fill": "$muted",
+                          "content": "WO-2024-121",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "wvGb9",
+                      "name": "Cell 1",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "Kantor Satu Arah",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "IqIsi",
+                      "name": "Cell 2",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 130,
+                      "content": "Bima Prakoso",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "fBgRi",
+                      "name": "Cell 3",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 100,
+                      "content": "24 Jul 2024",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Ctyti",
+                      "name": "Job status Dikerjakan",
+                      "width": 150,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "RpWlx",
+                          "name": "Job status dot",
+                          "fill": "$blue",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "GsHGr",
+                          "name": "Job status label",
+                          "fill": "$ink",
+                          "content": "Dikerjakan",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "lfO8N",
+                      "name": "Report status Draf",
+                      "width": 145,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "pawcd",
+                          "name": "Report status dot",
+                          "fill": "$blue",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "ZtHJ6",
+                          "name": "Report status label",
+                          "fill": "$ink",
+                          "content": "Draf",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon",
+                      "id": "rCTlv",
+                      "name": "Row actions",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "ellipsis",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "oUlG9",
+                  "name": "Row Maintenance genset 250 kVA",
+                  "width": "fill_container",
+                  "height": 76,
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "padding": [
+                    0,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Zbcor",
+                      "name": "Work order",
+                      "width": 250,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ZKs0C",
+                          "name": "Work title",
+                          "fill": "$ink",
+                          "content": "Maintenance genset 250 kVA",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "N6Zwqu",
+                          "name": "Work id",
+                          "fill": "$muted",
+                          "content": "WO-2024-122",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "D5hEs",
+                      "name": "Cell 1",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "PT Energi Mandiri",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "r6dLif",
+                      "name": "Cell 2",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 130,
+                      "content": "Dewi Lestari",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "rUZTH",
+                      "name": "Cell 3",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 100,
+                      "content": "25 Jul 2024",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ulzzd",
+                      "name": "Job status Dikerjakan",
+                      "width": 150,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "S2ywt8",
+                          "name": "Job status dot",
+                          "fill": "$blue",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "baYFQ",
+                          "name": "Job status label",
+                          "fill": "$ink",
+                          "content": "Dikerjakan",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "j4f7N",
+                      "name": "Report status Perlu review",
+                      "width": 145,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "TpQTH",
+                          "name": "Report status dot",
+                          "fill": "$warning",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "MtIMN",
+                          "name": "Report status label",
+                          "fill": "$ink",
+                          "content": "Perlu review",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon",
+                      "id": "MCDk6",
+                      "name": "Row actions",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "ellipsis",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "LR2kE",
+                  "name": "Row Perawatan chiller gedung A",
+                  "width": "fill_container",
+                  "height": 76,
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "padding": [
+                    0,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "PB2MO",
+                      "name": "Work order",
+                      "width": 250,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "BIgTq",
+                          "name": "Work title",
+                          "fill": "$ink",
+                          "content": "Perawatan chiller gedung A",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "X1bneC",
+                          "name": "Work id",
+                          "fill": "$muted",
+                          "content": "WO-2024-123",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "yWj6L",
+                      "name": "Cell 1",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "Hotel Duta Raya",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "SXPBT",
+                      "name": "Cell 2",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 130,
+                      "content": "Fajar Nugroho",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "F2Q6v5",
+                      "name": "Cell 3",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 100,
+                      "content": "26 Jul 2024",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "vugiz",
+                      "name": "Job status Dijadwalkan",
+                      "width": 150,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "PesNj",
+                          "name": "Job status dot",
+                          "fill": "$warning",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "i5hMcf",
+                          "name": "Job status label",
+                          "fill": "$ink",
+                          "content": "Dijadwalkan",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "PUrVz",
+                      "name": "Report status Belum ada",
+                      "width": 145,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "w0X0d",
+                          "name": "Report status dot",
+                          "fill": "$muted",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "yxHsl",
+                          "name": "Report status label",
+                          "fill": "$ink",
+                          "content": "Belum ada",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon",
+                      "id": "SSpl6",
+                      "name": "Row actions",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "ellipsis",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PwXiK",
+                  "name": "Row Servis AC cassette lantai 3",
+                  "width": "fill_container",
+                  "height": 76,
+                  "stroke": "$border",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "padding": [
+                    0,
+                    18
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "C2xDQ",
+                      "name": "Work order",
+                      "width": 250,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "jwfen",
+                          "name": "Work title",
+                          "fill": "$ink",
+                          "content": "Servis AC cassette lantai 3",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "bq4M9",
+                          "name": "Work id",
+                          "fill": "$muted",
+                          "content": "WO-2024-124",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "yK3g1",
+                      "name": "Cell 1",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 150,
+                      "content": "CV Arunika Properti",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "TFaR4",
+                      "name": "Cell 2",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": 130,
+                      "content": "Rizky Mahendra",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "b5qwe",
+                      "name": "Cell 3",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 100,
+                      "content": "22 Jul 2024",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "qWfH0",
+                      "name": "Job status Selesai",
+                      "width": 150,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "uPkzt",
+                          "name": "Job status dot",
+                          "fill": "$success",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "BA7ax",
+                          "name": "Job status label",
+                          "fill": "$ink",
+                          "content": "Selesai",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "EMvGL",
+                      "name": "Report status Terkirim",
+                      "width": 145,
+                      "gap": 7,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "gXt1B",
+                          "name": "Report status dot",
+                          "fill": "$success",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "dUQ5s",
+                          "name": "Report status label",
+                          "fill": "$ink",
+                          "content": "Terkirim",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "icon",
+                      "id": "g0x0Fy",
+                      "name": "Row actions",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "ellipsis",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "bg": {
+      "type": "color",
+      "value": "#F5F5F7"
+    },
+    "surface": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "ink": {
+      "type": "color",
+      "value": "#1D1D1F"
+    },
+    "muted": {
+      "type": "color",
+      "value": "#6E6E73"
+    },
+    "border": {
+      "type": "color",
+      "value": "#D2D2D7"
+    },
+    "subtle": {
+      "type": "color",
+      "value": "#EDEDF0"
+    },
+    "navy": {
+      "type": "color",
+      "value": "#1D1D1F"
+    },
+    "blue": {
+      "type": "color",
+      "value": "#0071E3"
+    },
+    "success": {
+      "type": "color",
+      "value": "#248A3D"
+    },
+    "warning": {
+      "type": "color",
+      "value": "#B06A00"
+    },
+    "error": {
+      "type": "color",
+      "value": "#D70015"
+    }
+  },
+  "fileToken": "f2ef9578-7950-4045-bb1b-09cf3bb80122"
+}
