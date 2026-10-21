@@ -9,5 +9,6 @@ __pycache__/
 Thumbs.db
 node_modules/
 dist/
+*.tsbuildinfo
 .vscode/
 .idea/

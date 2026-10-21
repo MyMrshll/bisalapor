@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108">
+  <defs>
+    <linearGradient id="logoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B3585"/>
+      <stop offset="100%" stop-color="#0F1E55"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Tile -->
+  <rect width="108" height="108" rx="24" fill="url(#logoBg)"/>
+  <!-- BisaLapor 'B' Document Monogram Silhouette -->
+  <path d="M 32 26 L 62 26 C 73 26 80 32 80 40 C 80 46 76 50 70 52 C 78 54 82 59 82 67 C 82 76 74 82 62 82 L 32 82 Z" fill="#FFFFFF"/>
+  <!-- Embedded Document Cutout -->
+  <path d="M 40 34 L 56 34 L 64 42 L 64 74 L 40 74 Z" fill="#0F1E55"/>
+  <!-- Folded Corner Detail -->
+  <path d="M 56 34 L 56 42 L 64 42 Z" fill="#1B3585"/>
+  <!-- Document Text Bars -->
+  <rect x="46" y="50" width="12" height="3" rx="1.5" fill="#FFFFFF"/>
+  <rect x="46" y="58" width="12" height="3" rx="1.5" fill="#FFFFFF"/>
+</svg>
